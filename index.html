@@ -1722,7 +1722,7 @@ waveUI.style.content = wordBuzz[0];
   height: 100px;
   width: 100%;
   min-width: 100vw;
-  z-index: 0;
+  z-index: -1;
   transition: all 2.5s;
 }
 #cloud.cloudy
@@ -1734,6 +1734,12 @@ position: relative;
     z-index: 0;
     transition: all 2.5s;
     transform: translate3d(0,-30vh,0);
+  }
+  .rocketa{
+    transform: translate3d(50px, -170px,0);
+    position: absolute;
+    font-size: 8em;
+    transition: all 2s ease;
   }
 
  </style>
@@ -1907,15 +1913,17 @@ position: relative;
   </div>
 
   <div class="flexbox-container">
-    <a href="#workwork"><button class="third-invert" id="flex-button1" >Explore Recent Projects 🚀</button></a>
+    <a href="#workwork"><button class="third-invert" id="flex-button1" >Explore Recent Projects <span id="rocket">🚀</span></button></a>
 
    <a href="#workwork"><button class="third-invert" id="flex-button2"><span class="fa fa-download"></span> Resume Pdf </button></a>
 
   </div><!--/end .flexbox-container -->
  <script>
   const cloudsToday = () => {document.getElementById('cloud').className += ' cloudy'};
+   const rocketBlast = () => {document.getElementById('rocket').className += ' rocketa'};
   const leftButton = document.getElementById('flex-button1');
 leftButton.addEventListener('mouseenter',cloudsToday);
+leftButton.addEventListener('mouseenter',rocketBlast);
 </script>
 
 </div><!--/end .splash-container -->

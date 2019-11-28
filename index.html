@@ -1715,7 +1715,26 @@ waveUI.style.content = wordBuzz[0];
   flexbox-container
  -->
  <style>
-
+#cloud {
+  position: relative;
+  top: 130vh;
+  left:12vw;
+  height: 100px;
+  width: 100%;
+  min-width: 100vw;
+  z-index: 0;
+  transition: all 2.5s;
+}
+#cloud.cloudy
+{
+position: relative;
+    top: 130vh;
+    left: -1vw;
+    height: 85vh;
+    z-index: 0;
+    transition: all 2.5s;
+    transform: translate3d(0,-30vh,0);
+  }
 
  </style>
 
@@ -1859,9 +1878,25 @@ waveUI.style.content = wordBuzz[0];
             <div class="new_footer_top">
                 <div class="container">
                     <div class="row">
+                      <img id="cloud"  src="https://dl3.pushbulletusercontent.com/grlZeyo1crX4Yrw2OgKZzPpGgYOKWZjQ/cloudss.png" alt="cloud" style="">
                       <div style="margin:auto;width: 100%;min-width:100vw;height: 140px;background-color: #036;padding: 0 20px 0 20px;transform: translate3d(0,85px,0);"></div>
                         <div class="col-lg-3 col-md-6">
-                        
+                        <script>
+                          // #important elements -
+                          // left button - #flex-button1 add event listener -trigger sky
+                          // add class "cloudy" to #cloud 
+
+                          // // define important elements
+                          
+                          // const cloud = document.getElementById('cloud');
+                          // // add event listener to trigger cloud transition in
+                          // leftButton.addEventListener('hover',()=>{
+                          //   cloud.classList.addClass('cloudy');
+                          // })
+
+                           
+
+                        </script>
                           <div class="grid-splash">
 
   <div class="splash-container">
@@ -1877,7 +1912,11 @@ waveUI.style.content = wordBuzz[0];
    <a href="#workwork"><button class="third-invert" id="flex-button2"><span class="fa fa-download"></span> Resume Pdf </button></a>
 
   </div><!--/end .flexbox-container -->
- 
+ <script>
+  const cloudsToday = () => {document.getElementById('cloud').className += ' cloudy'};
+  const leftButton = document.getElementById('flex-button1');
+leftButton.addEventListener('mouseenter',cloudsToday);
+</script>
 
 </div><!--/end .splash-container -->
 

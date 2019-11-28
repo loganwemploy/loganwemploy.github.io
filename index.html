@@ -1741,7 +1741,11 @@ position: relative;
     font-size: 8em;
     transition: all 2s ease;
   }
-
+@media screen and (max-width: 500px) {
+  #cloud {
+    display: none;
+  }
+}
  </style>
 
 
@@ -1823,7 +1827,7 @@ position: relative;
                   <a href="#" class="detail-button"><i class="icon-img"><img src="https://image.flaticon.com/icons/svg/1467/1467472.svg" width="100%"></i></a>
                 </div> <!-- /.service-block -->
               </div> <!-- /.single-block -->
-              <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up" data-aos-delay="500" style="max-width: 33.333%">
+              <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up" data-aos-delay="500" style="min-width: 32.333%;max-width: 33.3333% ">
                 <div class="service-block">
                   <span class="snow-dot"></span>
                   <span class="snow-dot"></span>

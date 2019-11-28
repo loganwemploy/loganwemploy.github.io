@@ -752,7 +752,7 @@ body {
   }
 }
 .wave {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftexturefabrik.files.wordpress.com%2F2013%2F12%2Fmoss_03.jpg&f=1&nofb=1");
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F38.media.tumblr.com%2F51bc1cc4747056c162b0be4d52ab2d09%2Ftumblr_mfuz11gXaN1s0hp7so1_500.gif&f=1&nofb=1);
   -moz-background-clip: text;
   -o-background-clip: text;
   -webkit-background-clip: text;
@@ -763,6 +763,8 @@ body {
   background-size: 200px 100px;
   background-repeat: repeat-x;
   opacity: 1;
+  filter: sepia(0.44) hue-rotate(11deg);
+
 
 }
 
@@ -783,7 +785,13 @@ body {
    */
   }
 
-  @media screen and (max-width:500px) {
+  @media screen and (max-width:850px) {
+ #oof33 {
+  width: 100%;
+  min-width: 33vw;
+  max-width: 100vw;
+}
+
     #wave {
   margin: 2.9em 0 0 1.5em;
   }
@@ -880,6 +888,9 @@ body {
  }
 
  @media screen and (min-width: 450px) {
+
+
+
   #showHide { margin: 5em 0 0 2.2em;
   }
  }
@@ -992,7 +1003,7 @@ body {
     left: 50%;
     transform:translate3d(-50%,0,0);
     width: 99.75%;
-    height: 210px;
+    height: 300px;
     border: 6px solid #fff;
     border-top:2px solid transparent;
     border-bottom: 0;
@@ -1651,7 +1662,7 @@ who creates lasting user experiences with</h3>
 <?xml version="1.0" encoding="utf-8"?>
 
 <br>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg class="cupTilt" style="margin: 1.75em;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="75px" height="75px" viewBox="0 0 200 200" enable-background="new 0 0 75 75" xml:space="preserve">
 <g>
@@ -1684,7 +1695,21 @@ who creates lasting user experiences with</h3>
 	<polygon fill="none" points="118.321,168.136 83.366,168.136 71.53,50.274 53.265,50.274 55.364,71.184 51.623,71.184 
 		60.236,150.415 63.322,150.415 65.974,176.83 100.927,176.83 135.879,176.83 136.752,168.136 	"/>
 </g>
-</svg>
+</svg> -->
+
+<div class="space" style="background-color: white"></div>
+<div class="space" style="background-color: white"></div>
+<div class="space" style="background-color: #036;">
+<div class="npm-installation-progress" style="font-size: 10px;margin-left: 18vw;max-width: 67vw;padding: 0 5px 0 5px">
+  <div class="loader-container"><span id="loader"></span><span id="loader-points">[ . . . . . . . . . .  ]</span></div>
+  <div id="spinner"></div>
+  <p>fetchMetadata:</p>
+  <p id="verb">verb</p>
+  <p id="mapToRegistry">mapToRegistry</p>
+  <p id="uri">uri https://registry.npmjs.org/</p>
+</div>
+</div><!--/space-->
+
 
 <!-- <script>
 const waveUI = document.querySelector('#wave');
@@ -1715,7 +1740,7 @@ waveUI.style.content = wordBuzz[0];
   flexbox-container
  -->
  <style>
-#cloud {
+/*#cloud {
   position: relative;
   top: 130vh;
   left:12vw;
@@ -1745,8 +1770,114 @@ position: relative;
   #cloud {
     display: none;
   }
+}*/
+
+.oof33 {
+  min-width: 33.3333%;
+  max-width: 33.3vw;
 }
+.npm-installation-progress {
+  color: #fff;
+  font-size: 17px;
+  width: 850px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loader-container {
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin-top: 2px;
+  transform: translateY(-50%);
+  width: 0px;
+  height: 20px;
+  background: #fff;
+  animation: width 50s steps(1, end) infinite;
+}
+
+@keyframes width {
+  0% {
+    width: 0%;
+  }
+  5% {
+    width: 15%;
+  }
+  9% {
+    width: 20%;
+  }
+  10% {
+    width: 23%;
+  }
+  15% {
+    width: 27%;
+  }
+  19% {
+    width: 30%;
+  }
+  25% {
+    width: 35%;
+  }
+  31% {
+    width: 40%;
+  }
+  32% {
+    width: 45%;
+  }
+  36% {
+    width: 49%;
+  }
+  39% {
+    width: 57%;
+  }
+  45% {
+    width: 62%;
+  }
+  50% {
+    width: 69%;
+  }
+  54% {
+    width: 73%;
+  }
+  60% {
+    width: 78%;
+  }
+  63% {
+    width: 81%;
+  }
+  90% {
+    width: 88%;
+  }
+}
+
+#spinner {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 10px;
+}
+
+#verb {
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#mapToRegistry {
+  color: purple;
+  margin-right: 10px;
+}
+
  </style>
+
 
 
 
@@ -1795,7 +1926,7 @@ position: relative;
           <div class="inner-wrapper" style="display: flex;justify-content: space-around;
           ">
             <div id='ui-flex-pick3' class="row">
-              <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up">
+              <div class="col-lg-4 single-block aos-init aos-animate oof33" id='oof33' data-aos="fade-up">
                 <div class="service-block">
                   <span class="snow-dot"></span>
                   <span class="snow-dot"></span>
@@ -1811,7 +1942,7 @@ position: relative;
                   <a href="#" class="detail-button"><i class="icon-img"><img src="https://image.flaticon.com/icons/svg/1027/1027567.svg"></i></a>
                 </div> <!-- /.service-block -->
               </div> <!-- /.single-block -->
-              <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+              <div class="col-lg-4 single-block aos-init aos-animate oof33" id="oof33" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-block">
                   <span class="snow-dot"></span>
                   <span class="snow-dot"></span>
@@ -1827,7 +1958,7 @@ position: relative;
                   <a href="#" class="detail-button"><i class="icon-img"><img src="https://image.flaticon.com/icons/svg/1467/1467472.svg" width="100%"></i></a>
                 </div> <!-- /.service-block -->
               </div> <!-- /.single-block -->
-              <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up" data-aos-delay="500" >
+              <div class="col-lg-4 single-block aos-init aos-animate oof33" id='oof33' data-aos="fade-up" data-aos-delay="500" >
                 <div class="service-block">
                   <span class="snow-dot"></span>
                   <span class="snow-dot"></span>
@@ -1888,7 +2019,7 @@ position: relative;
             <div class="new_footer_top">
                 <div class="container">
                     <div class="row">
-                      <img id="cloud"  src="https://dl3.pushbulletusercontent.com/grlZeyo1crX4Yrw2OgKZzPpGgYOKWZjQ/cloudss.png" alt="cloud" style="">
+                   <!--    <img id="cloud"  src="https://dl3.pushbulletusercontent.com/grlZeyo1crX4Yrw2OgKZzPpGgYOKWZjQ/cloudss.png" alt="cloud" style=""> -->
                       <div style="margin:auto;width: 100%;min-width:100vw;height: 140px;background-color: #036;padding: 0 20px 0 20px;transform: translate3d(0,85px,0);"></div>
                         <div class="col-lg-3 col-md-6">
                         <script>
@@ -1982,11 +2113,13 @@ leftButton.addEventListener('mouseenter',rocketBlast);
                         </div>
                     </div>
                 </div>
-                <div class="footer_bg">
+
+              <!--   <div class="footer_bg">
                     <div class="footer_bg_one"></div>
                     <div class="footer_bg_two"></div>
                 </div>
-            </div>
+            </div> -->
+
             <div class="footer_bottom">
                 <div class="container">
                     <div class="row align-items-center">
@@ -2111,5 +2244,44 @@ animate({
 
 
      </script>
+
+     <script>const spinner = "|/-\\";
+
+let spinnerDiv = document.getElementById("spinner");
+let verb = document.getElementById("verb");
+let mapToRegistry = document.getElementById("mapToRegistry");
+let uri = document.getElementById("uri");
+
+// spinner
+setInterval(function() {
+  let random = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+  spinnerDiv.innerHTML = spinner.charAt(random);
+}, 100);
+
+verb.innerHTML = "verb";
+mapToRegistry.innerHTML = "mapToRegistry";
+
+// texts
+setInterval(function() {
+  let vs = ["verb", "sill"];
+  let random = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+
+  verb.innerHTML = vs[random];
+
+  if (verb.innerHTML === "sill") {
+    verb.style.background = "#fff";
+    verb.style.color = "#000";
+
+    mapToRegistry.innerHTML = "mapToRegistry";
+    uri.innerHTML = "C:\\Users\\mburakerman\\AppData\\Roaming";
+  } else {
+    verb.style.background = "#000";
+    verb.style.color = "blue";
+
+    mapToRegistry.innerHTML = "afterAdd";
+    uri.innerHTML = "uri https://registry.npmjs.org";
+  }
+}, 1000);
+</script>
   </body>
   </html>

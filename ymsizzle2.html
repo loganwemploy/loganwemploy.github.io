@@ -31,10 +31,15 @@
     margin-top: 50%;
    }
 
+html {
+  padding: 0;
+  margin: 0;
+  width:100%;
+  max-width: 100vw;
+  overflow-x: hidden;}
 
 
-   /* ### nav css */
-
+/* ### nav css */
 
 #nav {
 display: flex;
@@ -149,7 +154,7 @@ width: 100%;
 max-width:100vw;
 /*background-color: rgba(0,0,0,0.88);*/
 justify-content: center;
-grid-template-columns: 100vw;
+grid-template-columns: 1fr;
 transform: translate3d(0,4.2em,0);
 
 
@@ -310,6 +315,8 @@ max-width:100vw;
 background-color: goldenrod;
 }
 
+
+
 </style>
 </head>
 <body>
@@ -330,7 +337,7 @@ background-color: goldenrod;
     </div><!--/.nav-left-one-->
 
     <!-- ### right side search bar "search y locations" -->
-      <ul class="nav-buttons" style="width:23vw;position: fixed;z-index:9999;top: 0;right:1em;background-color: #f90; /*#aka orange*/">
+      <ul class="nav-buttons" style="width:23vw;position: fixed;z-index:9999;top: 0;right:0.32em;background-color: #f90; /*#aka orange*/">
          <a href="./register.html" class="nav-link">
         <button style="font-size: ">Search Y</button></a>
       </ul>

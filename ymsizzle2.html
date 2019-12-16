@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+  <meta content="Page description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Logie" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link href="./assets/apple-icon-180x180.png" rel="apple-touch-icon">
+  <link href="./assets/favicon.ico" rel="icon">
+  <link rel="stylesheet" href="./main.css">
+
+
+
+  <title>Main Page V_2.1</title>  
+
+  <style>
+   
+
+   html {padding: 0;margin: 0;}
+
+   .cta-links {
+    margin-top: 50%;
+   }
+
+   /* ### nav css */
+
+
+#nav {
+display: flex;
+width: 100%;
+max-width:100vw;
+/*background-color: grey;*/
+flex-flow: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+}
+
+.nav-left-one {
+  background-color: indigo;
+  width: 67vw;
+  height: 45px;
+  border-radius: 16px;
+  border-radius-left-bottom:1px;
+
+  
+}
+
+
+.nav-left-two {
+  background-color: aqua;
+  width: 33vw;
+  height: 45px;
+  border-radius: 16px;
+  border-radius-left-bottom:1px;
+}
+
+.nav-buttons {
+  border-radius: 0.5em;
+  width: 66.667vw;
+  margin: 0 0.25em 0;
+  padding: 5px 7px 5px 7px;
+
+}
+
+
+.nav-left-two .nav-buttons button {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid white;
+  margin-left: -0.1em;
+  color: #fff; /*color: white;*/
+}
+
+/* ### secondary-nav css */
+
+#secondary-nav {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+  display: flex;
+  height: 15vw;
+  width: 100%;
+  max-width:100vw;
+  opacity: 1;
+  background-color: white;
+  background: rgb(180,5,191);
+  background: -webkit-linear-gradient(left, rgba(180,5,191,1) 0%, rgba(209,16,156,1) 75%, rgba(255,153,0,1) 100%);
+  background: -o-linear-gradient(left, rgba(180,5,191,1) 0%, rgba(209,16,156,1) 75%, rgba(255,153,0,1) 100%);
+  background: linear-gradient(to right, rgba(180,5,191,1) 0%, rgba(209,16,156,1) 75%, rgba(255,153,0,1) 100%);
+
+  margin: 0;
+  margin-top: -0.32em;
+  /*opacity: 0.95;*/
+  filter: brightness(0.95) contrast(1.1)
+}
+
+
+
+#secondary-nav .menu { 
+  height: 88%;
+  width: 33.3333%;
+  background-color: transparent;
+  border-radius: 1em;
+  /*justify-content: center;*/
+  padding: 5px 0 5px 0;
+  text-align: center;
+  color: #ffffff; /*aka white */
+}
+
+#secondary-nav .logo {
+   display: flex;
+   width: 66.6666%;
+   height: 100%;
+   justify-content: flex-start;
+   margin-left: 0.88em;
+   border-radius: 1em;
+   background-color: transparent;
+
+  /* background:url() no-repeat;*/
+}
+
+#secondary-nav .logo img {
+  /*padding: 1.32em 2em;*/
+  margin-top: -0.5em;
+  height: 67%;
+  width: 44%;
+  align-self: center;
+  filter: contrast(1.72) drop-shadow(1px 2px 3px rgba(0,0,0,0.16));
+
+}
+
+/* ### hero css */
+#hero {
+display: grid;
+width: 100%;
+max-width:100vw;
+/*background-color: rgba(0,0,0,0.88);*/
+justify-content: center;
+grid-template-columns: 100vw;
+transform: translate3d(0,4.2em,0);
+
+
+}
+
+#hero img {
+  max-width: 100vw;
+  width: 100%;
+  text-align: center;
+  /*border-radius: 16px;*/
+  filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.68))
+}
+
+
+.arrow {
+  margin-top: 5em;
+  padding: 2px 3px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgba(0,0,0,0.32);
+  height: 4vh;
+}
+
+#arrow-left {
+
+
+}
+
+/* ### three-options css */
+#three-options {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: green;
+animation: major linear 2.3s;
+animation-delay: 5s
+}
+@keyframes major {
+    0% {opacity: 32%;}
+  50%{opacity:100%;}
+   75%{opacity: 50%}
+   100%{opacity: 100%;}
+
+}
+/* ### ymca-news-feed css */
+#ymca-news-feed {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: blue;
+animation: major linear 2.3s;
+animation-delay: 6s;
+}
+
+/* ### quick-links css */
+#quick-links {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: indigo;
+animation: major linear 2.3s;
+animation-delay: 7.32s;
+}
+
+/* ### hours css */
+#hours {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: violet;
+animation: major linear 2.3s;
+animation-delay: 8.5s;
+}
+
+/* ### location css */
+#location {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: pink;
+animation: major linear 2.3s;
+animation-delay: 9s;
+}
+
+
+
+
+
+
+
+
+.three-options {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: green;
+
+}
+@keyframes major {
+    0% {opacity: 32%;}
+  50%{opacity:100%;}
+   75%{opacity: 50%}
+   100%{opacity: 100%;}
+
+}
+/* ### ymca-news-feed css */
+.ymca-news-feed {
+display: flex;
+width: 100%;
+max-width:100vw;
+/*background-color: blue;*/
+
+}
+
+/* ### quick-links css */
+.quick-links {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: indigo;
+
+}
+.dashboard-inputs {
+  width: 100%;
+  min-width: 75vw;
+  height: 60px;
+  padding: 5px 7px;
+  /*max-width: 100px;*/
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+}
+/* ### hours css */
+.hours {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: violet;
+
+}
+
+/* ### location css */
+.location {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: pink;
+
+}
+
+
+/* ### footer css */
+#footer {
+display: flex;
+width: 100%;
+max-width:100vw;
+background-color: goldenrod;
+}
+
+</style>
+</head>
+<body>
+  <!-- /* ### nav css */ -->
+  
+    <div class="nav-left-two">
+      <div class="section-1" id="nav">
+    <div class="nav-left-one">
+      <ul class="nav-buttons">
+        <!-- ### nav-links -->
+        <a href="./register.html" class="nav-link-group1">
+        <button>register</button></a>
+        <a href="./tour.html" class="nav-link-group1">
+          <button>tour</button></a>
+        <a href="./donate.html" class="nav-link-group1">
+          <button>donate</button></a>&nbsp;
+      </ul>
+    </div><!--/.nav-left-one-->
+
+    <!-- ### right side search bar "search y locations" -->
+      <ul class="nav-buttons" style="width:auto;position: fixed;z-index:9;top: 0;right:0.25em;background-color: #f90; /*#aka orange*/">
+         <a href="./register.html" class="nav-link">
+        <button>Search Y</button></a>
+      </ul>
+    </div>
+  </div><!--/.section-1 #nav-->
+  <!-- /* ### secondary-nav css */ -->
+  <div class="section-two" id="secondary-nav">
+    <!-- ### section-2 left menu -->
+    <div class="menu">
+      menu
+    </div>
+    <!-- ### right side of section two ( YMCA LOGO ) -->
+    <div class="logo">
+      <img style="max-height: " src="https://ymcachicago.org/page/-/wrapper/img/ymca_logo_238.png" alt="logo" />
+    </div
+></div>
+  <!-- /* ### hero css */ -->
+  <div class="section-3" id="hero">
+    <!-- <div class="arrow" id="arrow-left"><</div> -->
+    <img id="hero-carousel-img" src="https://dl3.pushbulletusercontent.com/XHZKws9GHrAaACKtingYHmc3A6roRdOA/2020-Metro-WinterCampaign-RegistrationPush-HomepageHeroes-Referral%202.jpg" alt="carousel">
+  <!--  ### logan's optimized pic above 
+   (115.6 KB) = 79% file savings!!!
+    563.6 KB original image below
+    https://www.ymcachicago.org/page/-/images/2020-Metro-WinterCampaign-RegistrationPush-HomepageHeroes-Referral.jpg -->
+    <!-- <div class="arrow" id="arrow-right">></div> -->
+  </div>
+  <div class="spacer" id="arrow-right" style="height: 16vh;background-color: white;"></div>
+  <!-- /* ### three-options css */ -->
+  <div class="section-4" id="three-options">&nbsp;<!-- three-options --></div>
+  <!-- /* ### ymca-news-feed css */ -->
+  <div class="section-5" id="ymca-news-feed">&nbsp;<!-- ymca-news-feed --></div>
+  <!-- /* ### quick-links css */ -->
+  <div class="section-6" id="quick-links">&nbsp;<!-- quick-links --></div>
+  <!-- /* ### hours css */ -->
+  <div class="section-7" id="hours"><!-- hours -->&nbsp;</div>
+  <!-- /* ### location css */ -->
+  <div class="section-8" id="location"><!-- location -->&nbsp;</div>
+
+  <div class="spacer" style="height: 5.5vh;width: 100%;"></div>
+  <!-- #three-options -->
+  <div class="three-options" style="height:210px;font-size: 16px;font-weight: bold;background-color: white;display: grid;grid-template-columns: 1fr 1fr;">
+    <div class="half-one" style="background: url(https://dl3.pushbulletusercontent.com/cKp6BcYpnJ7EIO9nIxR6k79gEpu0yQfq/image.png) center no-repeat;border-radius: 16px;text-align: center;">
+      <h2 style="padding: 5px 7px 5px 7px;background-color: white;">YMCA locations</h2>
+    </div>
+    <div class="half-two" style="">
+      <button style="font-size: 22px;margin-top: 2.55em;margin-left: 50%;transform: translate3d(-50%,0,0);width: 68%;letter-spacing: 1;padding: 5px 7px 5px 7px;border-radius: 0.5em;box-shadow: 1px 2px 2px rgba(0,0,0,0.32);">CALL to ACTION</button>
+    
+      <ul style="display: flex;justify-content: space-around;padding: 5px 7px 5px 7px;">
+     <div class="cta-links"><a href="#">lorem</a></div>
+     <div class="cta-links"><a href="#">tothee</a></div>
+     <div class="cta-links"><a href="#">ipsum</a></div>
+   
+   </ul>
+      </div>
+    </div>
+  </div>
+   <!-- ###news-feed  -->
+  <div class="ymca-news-feed" style="display: flex;flex-direction: column;">
+    <h2 style="width: 100%;max-width: 43vw;margin-left: 1.5em;padding: 5px 7px 5px 7px;margin-top: 2.5em;line-height: 1.05">health and have fun at the same time. At the Y</h2><!-- <img style="height: 100%;width: 100%;max-width: 100vw;opacity: 0.32;position: absolute;" src="https://dl3.pushbulletusercontent.com/zpFWrAwvvoSmRSEceGl7WWIyiP6nAtKx/ymca.jpg" alt=""> --></div>
+  <div class="quick-links">
+    <div class="dashboard-inputs">
+      <form action="#" style="display: flex;justify-content: space-around;background-color: red;">
+        <input type="text" placeholder="oops">
+        <input type="text" placeholder="oops">
+        <input type="text" placeholder="oops">
+        <button type="submit" style="width: auto;">poooop</button>
+      </form>
+    </div>
+  </div>
+  <div class="hours">filters </div>
+  <div class="location">results</div>
+
+  <!-- /* ### footer css */ -->
+  <div class="section-9" id="footer"></div>
+ <!--  <div class="section-10"></div>
+  <div class="section-11"></div>
+  <div class="section-12"></div>
+  <div class="section-13"></div>
+  <div class="section-14"></div>
+  <div class="section-15"></div>
+  <div class="section-16"></div> -->
+<script>
+  // #define my variables
+  const heroImageCarousel = document.getElementById('hero-carousel-img');
+  const arrowLeft = document.getElementById('arrow-left');
+  const arrowRight = document.getElementById('arrow-right');
+
+  
+  const arrayCarousel = ['https://placehold.it/200x200.jpg','https://placehold.it/200x200.jpg','https://placehold.it/200x200.jpg'];
+let counter = 0;
+  
+   let add = () (function () {
+      let counter = 0;
+      return function(){
+        counter += 1; return counter;
+      }
+   })();
+   add();
+
+   console.log(counter);
+
+ 
+
+
+   
+
+  
+   // arrowRight.addEventListener('click', addOneIncrement)s
+   
+   // setInterval(canChgCounter,3000);
+</script>
+</body>
+</html>

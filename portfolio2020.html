@@ -1036,7 +1036,7 @@ Sidebar
   /*transform: translate(100%,0,0);*/
   /*left: 99vw;*/
   transition: all ease-out 1s !important;
-  z-index: 99999;position: fixed;
+  z-index: 999;position: fixed;
 }
 .sidebar header {
   cursor: pointer;
@@ -1274,11 +1274,16 @@ Sidebar Nav
 
 #cta-bubbly-button {
   position: absolute;
-  z-index: 999999999;
+  z-index: 9999;
   top:75vh;
   left:60vw;
 }
 
+@media screen and (min-width: 550px) {
+  .sidebar {
+    width: 32.23vw !important;
+  }
+}
 
 @media screen and (max-width: 500px){
   body  { 
@@ -1287,12 +1292,12 @@ Sidebar Nav
 }
 .mast__header  {
   font-size: 0.9em;
-  transform: translate3d(0,20px,0);
+  transform: translate3d(0,15px,0);
 }
 #cta-bubbly-button {
   position: absolute;
-  z-index: 999999999;
-  top:74vh;
+  z-index: 9999;
+  top:70vh;
   left:57vw;
   transform: scale(0.9);
   padding: 15px 21px 15px 21px;
@@ -1303,6 +1308,7 @@ Sidebar Nav
 }
 
 }
+
 
 	</style>
 </head>

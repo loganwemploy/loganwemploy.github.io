@@ -1316,6 +1316,11 @@ Sidebar Nav
   font-size: 0.8em;
   transform: translate3d(0,14px,0);
 }
+.c-services {
+  margin-top: -23vh;
+  cursor: pointer;
+}
+
 #cta-bubbly-button {
   position: absolute;
   z-index: 9999;

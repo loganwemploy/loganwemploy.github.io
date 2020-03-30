@@ -1317,7 +1317,7 @@ Sidebar Nav
   transform: translate3d(0,14px,0);
 }
 .c-services {
-  margin-top: -23vh;
+  margin-top: -12vh !important;
   cursor: pointer;
 }
 

@@ -7,20 +7,1552 @@
 
   <meta charset="UTF-8">
   <title>Document</title>
-<link rel="stylesheet" type="text/css" href="./css.css" >
+<!-- <link rel="stylesheet" type="text/css" href="./css.css" > -->
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1.0" name="viewport">
   <meta content="description" name="description">
   <meta name="google" content="notranslate" />
-
+ 
 <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" m>
 <link href="https://fonts.googleapis.com/css2?family=Literata:wght@700&display=swap" rel="stylesheet">
 
   <style>
 
 
+:root {
+  --color-brand-primary: #111BCE;
+  --color-brand-primary-h: 251;
+  --color-brand-primary-s: 43%;
+  --color-brand-primary-l: 43%;
+  --color-brand-accent: #111BCE;
+  --color-brand-accent-h: 16;
+  --color-brand-accent-s: 96%;
+  --color-brand-accent-l: 61%;
+  --color-brand-accent-bg: hsl(calc(var(--color-brand-accent-h) + 17), 100%, 96%);
+  --ratio: 1.4;
+  --s-6: calc(var(--s-5) / var(--ratio));
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: calc(1.05rem + 0.333vw);
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --s6: calc(var(--s5) * var(--ratio));
+  font-size: 62.5%;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+
+
+  *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.dabody {
+  margin: 0;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: normal;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+.sep {
+  border: 0;
+  width: 3em;
+  height: 1px;
+  margin: 1em 0;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.mast {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-color: #222;
+
+}
+
+.mast:after {
+  z-index: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.9);
+  background-color: #222;
+  background-color: #2e2c31;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%237a7a7a' fill-opacity='0.01'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+.mast > header {
+  z-index: 2;
+  position: relative;
+}
+.mast__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: 50%;
+  background-color: #2e2c31;
+background: url();
+opacity: 0.32
+}
+.mast__header {
+  padding: 5%;
+}
+.mast__title {
+  /*font-family: "Cutive Mono", monospace;*/
+  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.75em;
+  font-weight: 400;
+  letter-spacing: 0.23em;
+  text-transform: uppercase;
+  max-width: 33.3333%;
+}
+
+.mast__title span {
+  -webkit-animation: letter-glow 0.32s 0s ease both;
+          animation: letter-glow 0.32s 0s ease both;
+}
+.mast__title span:nth-child(1) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+.mast__title span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.mast__title span:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.mast__title span:nth-child(4) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.mast__title span:nth-child(5) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.mast__title span:nth-child(6) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.mast__title span:nth-child(7) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+.mast__title span:nth-child(8) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.mast__title span:nth-child(9) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+.mast__title span:nth-child(10) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.mast__title span:nth-child(11) {
+  -webkit-animation-delay: 0.55s;
+          animation-delay: 0.55s;
+}
+.mast__title span:nth-child(12) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.mast__title span:nth-child(13) {
+  -webkit-animation-delay: 0.65s;
+          animation-delay: 0.65s;
+}
+.mast__title span:nth-child(14) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.mast__title span:nth-child(15) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+.mast__title span:nth-child(16) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.mast__title span:nth-child(17) {
+  -webkit-animation-delay: 0.85s;
+          animation-delay: 0.85s;
+}
+.mast__title span:nth-child(18) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.mast__title span:nth-child(19) {
+  -webkit-animation-delay: 0.95s;
+          animation-delay: 0.95s;
+}
+.mast__title span:nth-child(20) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.mast__title span:nth-child(21) {
+  -webkit-animation-delay: 1.05s;
+          animation-delay: 1.05s;
+}
+.mast__title span:nth-child(22) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+.mast__title span:nth-child(23) {
+  -webkit-animation-delay: 1.15s;
+          animation-delay: 1.15s;
+}
+.mast__title span:nth-child(24) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.mast__title span:nth-child(25) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+.mast__text {
+  font-family: "Cutive Mono", monospace;
+  font-size: 1em;
+  margin: 0 0 0.5em;
+  line-height: 1.5;
+  white-space: pre;
+}
+.mast__text span {
+  -webkit-animation: letter-glow 0.7s 0s ease both;
+          animation: letter-glow 0.7s 0s ease both;
+}
+.mast__text span:nth-child(1) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+.mast__text span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.mast__text span:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.mast__text span:nth-child(4) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.mast__text span:nth-child(5) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.mast__text span:nth-child(6) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.mast__text span:nth-child(7) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+.mast__text span:nth-child(8) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.mast__text span:nth-child(9) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+.mast__text span:nth-child(10) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.mast__text span:nth-child(11) {
+  -webkit-animation-delay: 0.55s;
+          animation-delay: 0.55s;
+}
+.mast__text span:nth-child(12) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.mast__text span:nth-child(13) {
+  -webkit-animation-delay: 0.65s;
+          animation-delay: 0.65s;
+}
+.mast__text span:nth-child(14) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.mast__text span:nth-child(15) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+.mast__text span:nth-child(16) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.mast__text span:nth-child(17) {
+  -webkit-animation-delay: 0.85s;
+          animation-delay: 0.85s;
+}
+.mast__text span:nth-child(18) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.mast__text span:nth-child(19) {
+  -webkit-animation-delay: 0.95s;
+          animation-delay: 0.95s;
+}
+.mast__text span:nth-child(20) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.mast__text span:nth-child(21) {
+  -webkit-animation-delay: 1.05s;
+          animation-delay: 1.05s;
+}
+.mast__text span:nth-child(22) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+.mast__text span:nth-child(23) {
+  -webkit-animation-delay: 1.15s;
+          animation-delay: 1.15s;
+}
+.mast__text span:nth-child(24) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.mast__text span:nth-child(25) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+.mast__text span:nth-child(26) {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+.mast__text span:nth-child(27) {
+  -webkit-animation-delay: 1.35s;
+          animation-delay: 1.35s;
+}
+.mast__text span:nth-child(28) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.mast__text span:nth-child(29) {
+  -webkit-animation-delay: 1.45s;
+          animation-delay: 1.45s;
+}
+.mast__text span:nth-child(30) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.mast__text span:nth-child(31) {
+  -webkit-animation-delay: 1.55s;
+          animation-delay: 1.55s;
+}
+.mast__text span:nth-child(32) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.mast__text span:nth-child(33) {
+  -webkit-animation-delay: 1.65s;
+          animation-delay: 1.65s;
+}
+.mast__text span:nth-child(34) {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+.mast__text span:nth-child(35) {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+.mast__text span:nth-child(36) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.mast__text span:nth-child(37) {
+  -webkit-animation-delay: 1.85s;
+          animation-delay: 1.85s;
+}
+.mast__text span:nth-child(38) {
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+.mast__text span:nth-child(39) {
+  -webkit-animation-delay: 1.95s;
+          animation-delay: 1.95s;
+}
+.mast__text span:nth-child(40) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.mast__text span:nth-child(41) {
+  -webkit-animation-delay: 2.05s;
+          animation-delay: 2.05s;
+}
+.mast__text span:nth-child(42) {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.mast__text span:nth-child(43) {
+  -webkit-animation-delay: 2.15s;
+          animation-delay: 2.15s;
+}
+.mast__text span:nth-child(44) {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.mast__text span:nth-child(45) {
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+.mast__text span:nth-child(46) {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.mast__text span:nth-child(47) {
+  -webkit-animation-delay: 2.35s;
+          animation-delay: 2.35s;
+}
+.mast__text span:nth-child(48) {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.mast__text span:nth-child(49) {
+  -webkit-animation-delay: 2.45s;
+          animation-delay: 2.45s;
+}
+.mast__text span:nth-child(50) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.mast__text span:nth-child(51) {
+  -webkit-animation-delay: 2.55s;
+          animation-delay: 2.55s;
+}
+.mast__text span:nth-child(52) {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+.mast__text span:nth-child(53) {
+  -webkit-animation-delay: 2.65s;
+          animation-delay: 2.65s;
+}
+.mast__text span:nth-child(54) {
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.mast__text span:nth-child(55) {
+  -webkit-animation-delay: 2.75s;
+          animation-delay: 2.75s;
+}
+.mast__text span:nth-child(56) {
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.mast__text span:nth-child(57) {
+  -webkit-animation-delay: 2.85s;
+          animation-delay: 2.85s;
+}
+.mast__text span:nth-child(58) {
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+}
+.mast__text span:nth-child(59) {
+  -webkit-animation-delay: 2.95s;
+          animation-delay: 2.95s;
+}
+.mast__text span:nth-child(60) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.mast__text span:nth-child(61) {
+  -webkit-animation-delay: 3.05s;
+          animation-delay: 3.05s;
+}
+.mast__text span:nth-child(62) {
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+.mast__text span:nth-child(63) {
+  -webkit-animation-delay: 3.15s;
+          animation-delay: 3.15s;
+}
+.mast__text span:nth-child(64) {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+.mast__text span:nth-child(65) {
+  -webkit-animation-delay: 3.25s;
+          animation-delay: 3.25s;
+}
+.mast__text span:nth-child(66) {
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+.mast__text span:nth-child(67) {
+  -webkit-animation-delay: 3.35s;
+          animation-delay: 3.35s;
+}
+.mast__text span:nth-child(68) {
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+.mast__text span:nth-child(69) {
+  -webkit-animation-delay: 3.45s;
+          animation-delay: 3.45s;
+}
+.mast__text span:nth-child(70) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+.mast__text span:nth-child(71) {
+  -webkit-animation-delay: 3.55s;
+          animation-delay: 3.55s;
+}
+.mast__text span:nth-child(72) {
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+.mast__text span:nth-child(73) {
+  -webkit-animation-delay: 3.65s;
+          animation-delay: 3.65s;
+}
+.mast__text span:nth-child(74) {
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
+}
+.mast__text span:nth-child(75) {
+  -webkit-animation-delay: 3.75s;
+          animation-delay: 3.75s;
+}
+.mast__text span:nth-child(76) {
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
+}
+.mast__text span:nth-child(77) {
+  -webkit-animation-delay: 3.85s;
+          animation-delay: 3.85s;
+}
+.mast__text span:nth-child(78) {
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s;
+}
+.mast__text span:nth-child(79) {
+  -webkit-animation-delay: 3.95s;
+          animation-delay: 3.95s;
+}
+.mast__text span:nth-child(80) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.mast__text span:nth-child(81) {
+  -webkit-animation-delay: 4.05s;
+          animation-delay: 4.05s;
+}
+.mast__text span:nth-child(82) {
+  -webkit-animation-delay: 4.1s;
+          animation-delay: 4.1s;
+}
+.mast__text span:nth-child(83) {
+  -webkit-animation-delay: 4.15s;
+          animation-delay: 4.15s;
+}
+.mast__text span:nth-child(84) {
+  -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s;
+}
+.mast__text span:nth-child(85) {
+  -webkit-animation-delay: 4.25s;
+          animation-delay: 4.25s;
+}
+.mast__text span:nth-child(86) {
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s;
+}
+.mast__text span:nth-child(87) {
+  -webkit-animation-delay: 4.35s;
+          animation-delay: 4.35s;
+}
+.mast__text span:nth-child(88) {
+  -webkit-animation-delay: 4.4s;
+          animation-delay: 4.4s;
+}
+.mast__text span:nth-child(89) {
+  -webkit-animation-delay: 4.45s;
+          animation-delay: 4.45s;
+}
+.mast__text span:nth-child(90) {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+.mast__text span:nth-child(91) {
+  -webkit-animation-delay: 4.55s;
+          animation-delay: 4.55s;
+}
+.mast__text span:nth-child(92) {
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s;
+}
+.mast__text span:nth-child(93) {
+  -webkit-animation-delay: 4.65s;
+          animation-delay: 4.65s;
+}
+.mast__text span:nth-child(94) {
+  -webkit-animation-delay: 4.7s;
+          animation-delay: 4.7s;
+}
+.mast__text span:nth-child(95) {
+  -webkit-animation-delay: 4.75s;
+          animation-delay: 4.75s;
+}
+.mast__text span:nth-child(96) {
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
+}
+.mast__text span:nth-child(97) {
+  -webkit-animation-delay: 4.85s;
+          animation-delay: 4.85s;
+}
+.mast__text span:nth-child(98) {
+  -webkit-animation-delay: 4.9s;
+          animation-delay: 4.9s;
+}
+.mast__text span:nth-child(99) {
+  -webkit-animation-delay: 4.95s;
+          animation-delay: 4.95s;
+}
+.mast__text span:nth-child(100) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.mast__text span:nth-child(101) {
+  -webkit-animation-delay: 5.05s;
+          animation-delay: 5.05s;
+}
+.mast__text span:nth-child(102) {
+  -webkit-animation-delay: 5.1s;
+          animation-delay: 5.1s;
+}
+.mast__text span:nth-child(103) {
+  -webkit-animation-delay: 5.15s;
+          animation-delay: 5.15s;
+}
+.mast__text span:nth-child(104) {
+  -webkit-animation-delay: 5.2s;
+          animation-delay: 5.2s;
+}
+.mast__text span:nth-child(105) {
+  -webkit-animation-delay: 5.25s;
+          animation-delay: 5.25s;
+}
+.mast__text span:nth-child(106) {
+  -webkit-animation-delay: 5.3s;
+          animation-delay: 5.3s;
+}
+.mast__text span:nth-child(107) {
+  -webkit-animation-delay: 5.35s;
+          animation-delay: 5.35s;
+}
+.mast__text span:nth-child(108) {
+  -webkit-animation-delay: 5.4s;
+          animation-delay: 5.4s;
+}
+.mast__text span:nth-child(109) {
+  -webkit-animation-delay: 5.45s;
+          animation-delay: 5.45s;
+}
+.mast__text span:nth-child(110) {
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+.mast__text span:nth-child(111) {
+  -webkit-animation-delay: 5.55s;
+          animation-delay: 5.55s;
+}
+.mast__text span:nth-child(112) {
+  -webkit-animation-delay: 5.6s;
+          animation-delay: 5.6s;
+}
+.mast__text span:nth-child(113) {
+  -webkit-animation-delay: 5.65s;
+          animation-delay: 5.65s;
+}
+.mast__text span:nth-child(114) {
+  -webkit-animation-delay: 5.7s;
+          animation-delay: 5.7s;
+}
+.mast__text span:nth-child(115) {
+  -webkit-animation-delay: 5.75s;
+          animation-delay: 5.75s;
+}
+.mast__text span:nth-child(116) {
+  -webkit-animation-delay: 5.8s;
+          animation-delay: 5.8s;
+}
+.mast__text span:nth-child(117) {
+  -webkit-animation-delay: 5.85s;
+          animation-delay: 5.85s;
+}
+.mast__text span:nth-child(118) {
+  -webkit-animation-delay: 5.9s;
+          animation-delay: 5.9s;
+}
+.mast__text span:nth-child(119) {
+  -webkit-animation-delay: 5.95s;
+          animation-delay: 5.95s;
+}
+.mast__text span:nth-child(120) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+.mast__text span:nth-child(121) {
+  -webkit-animation-delay: 6.05s;
+          animation-delay: 6.05s;
+}
+.mast__text span:nth-child(122) {
+  -webkit-animation-delay: 6.1s;
+          animation-delay: 6.1s;
+}
+.mast__text span:nth-child(123) {
+  -webkit-animation-delay: 6.15s;
+          animation-delay: 6.15s;
+}
+.mast__text span:nth-child(124) {
+  -webkit-animation-delay: 6.2s;
+          animation-delay: 6.2s;
+}
+.mast__text span:nth-child(125) {
+  -webkit-animation-delay: 6.25s;
+          animation-delay: 6.25s;
+}
+.mast__text span:nth-child(126) {
+  -webkit-animation-delay: 6.3s;
+          animation-delay: 6.3s;
+}
+.mast__text span:nth-child(127) {
+  -webkit-animation-delay: 6.35s;
+          animation-delay: 6.35s;
+}
+.mast__text span:nth-child(128) {
+  -webkit-animation-delay: 6.4s;
+          animation-delay: 6.4s;
+}
+.mast__text span:nth-child(129) {
+  -webkit-animation-delay: 6.45s;
+          animation-delay: 6.45s;
+}
+.mast__text span:nth-child(130) {
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
+}
+.mast__text span:nth-child(131) {
+  -webkit-animation-delay: 6.55s;
+          animation-delay: 6.55s;
+}
+.mast__text span:nth-child(132) {
+  -webkit-animation-delay: 6.6s;
+          animation-delay: 6.6s;
+}
+.mast__text span:nth-child(133) {
+  -webkit-animation-delay: 6.65s;
+          animation-delay: 6.65s;
+}
+.mast__text span:nth-child(134) {
+  -webkit-animation-delay: 6.7s;
+          animation-delay: 6.7s;
+}
+.mast__text span:nth-child(135) {
+  -webkit-animation-delay: 6.75s;
+          animation-delay: 6.75s;
+}
+.mast__text span:nth-child(136) {
+  -webkit-animation-delay: 6.8s;
+          animation-delay: 6.8s;
+}
+.mast__text span:nth-child(137) {
+  -webkit-animation-delay: 6.85s;
+          animation-delay: 6.85s;
+}
+.mast__text span:nth-child(138) {
+  -webkit-animation-delay: 6.9s;
+          animation-delay: 6.9s;
+}
+.mast__text span:nth-child(139) {
+  -webkit-animation-delay: 6.95s;
+          animation-delay: 6.95s;
+}
+.mast__text span:nth-child(140) {
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+.mast__text span:nth-child(141) {
+  -webkit-animation-delay: 7.05s;
+          animation-delay: 7.05s;
+}
+.mast__text span:nth-child(142) {
+  -webkit-animation-delay: 7.1s;
+          animation-delay: 7.1s;
+}
+.mast__text span:nth-child(143) {
+  -webkit-animation-delay: 7.15s;
+          animation-delay: 7.15s;
+}
+.mast__text span:nth-child(144) {
+  -webkit-animation-delay: 7.2s;
+          animation-delay: 7.2s;
+}
+.mast__text span:nth-child(145) {
+  -webkit-animation-delay: 7.25s;
+          animation-delay: 7.25s;
+}
+.mast__text span:nth-child(146) {
+  -webkit-animation-delay: 7.3s;
+          animation-delay: 7.3s;
+}
+.mast__text span:nth-child(147) {
+  -webkit-animation-delay: 7.35s;
+          animation-delay: 7.35s;
+}
+.mast__text span:nth-child(148) {
+  -webkit-animation-delay: 7.4s;
+          animation-delay: 7.4s;
+}
+.mast__text span:nth-child(149) {
+  -webkit-animation-delay: 7.45s;
+          animation-delay: 7.45s;
+}
+.mast__text span:nth-child(150) {
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
+.mast__text span:nth-child(151) {
+  -webkit-animation-delay: 7.55s;
+          animation-delay: 7.55s;
+}
+.mast__text span:nth-child(152) {
+  -webkit-animation-delay: 7.6s;
+          animation-delay: 7.6s;
+}
+.mast__text span:nth-child(153) {
+  -webkit-animation-delay: 7.65s;
+          animation-delay: 7.65s;
+}
+.mast__text span:nth-child(154) {
+  -webkit-animation-delay: 7.7s;
+          animation-delay: 7.7s;
+}
+.mast__text span:nth-child(155) {
+  -webkit-animation-delay: 7.75s;
+          animation-delay: 7.75s;
+}
+.mast__text span:nth-child(156) {
+  -webkit-animation-delay: 7.8s;
+          animation-delay: 7.8s;
+}
+.mast__text span:nth-child(157) {
+  -webkit-animation-delay: 7.85s;
+          animation-delay: 7.85s;
+}
+.mast__text span:nth-child(158) {
+  -webkit-animation-delay: 7.9s;
+          animation-delay: 7.9s;
+}
+.mast__text span:nth-child(159) {
+  -webkit-animation-delay: 7.95s;
+          animation-delay: 7.95s;
+}
+.mast__text span:nth-child(160) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+.mast__text span:nth-child(161) {
+  -webkit-animation-delay: 8.05s;
+          animation-delay: 8.05s;
+}
+.mast__text span:nth-child(162) {
+  -webkit-animation-delay: 8.1s;
+          animation-delay: 8.1s;
+}
+.mast__text span:nth-child(163) {
+  -webkit-animation-delay: 8.15s;
+          animation-delay: 8.15s;
+}
+.mast__text span:nth-child(164) {
+  -webkit-animation-delay: 8.2s;
+          animation-delay: 8.2s;
+}
+.mast__text span:nth-child(165) {
+  -webkit-animation-delay: 8.25s;
+          animation-delay: 8.25s;
+}
+.mast__text span:nth-child(166) {
+  -webkit-animation-delay: 8.3s;
+          animation-delay: 8.3s;
+}
+.mast__text span:nth-child(167) {
+  -webkit-animation-delay: 8.35s;
+          animation-delay: 8.35s;
+}
+.mast__text span:nth-child(168) {
+  -webkit-animation-delay: 8.4s;
+          animation-delay: 8.4s;
+}
+.mast__text span:nth-child(169) {
+  -webkit-animation-delay: 8.45s;
+          animation-delay: 8.45s;
+}
+.mast__text span:nth-child(170) {
+  -webkit-animation-delay: 8.5s;
+          animation-delay: 8.5s;
+}
+.mast__text span:nth-child(171) {
+  -webkit-animation-delay: 8.55s;
+          animation-delay: 8.55s;
+}
+.mast__text span:nth-child(172) {
+  -webkit-animation-delay: 8.6s;
+          animation-delay: 8.6s;
+}
+.mast__text span:nth-child(173) {
+  -webkit-animation-delay: 8.65s;
+          animation-delay: 8.65s;
+}
+.mast__text span:nth-child(174) {
+  -webkit-animation-delay: 8.7s;
+          animation-delay: 8.7s;
+}
+.mast__text span:nth-child(175) {
+  -webkit-animation-delay: 8.75s;
+          animation-delay: 8.75s;
+}
+.mast__text span:nth-child(176) {
+  -webkit-animation-delay: 8.8s;
+          animation-delay: 8.8s;
+}
+.mast__text span:nth-child(177) {
+  -webkit-animation-delay: 8.85s;
+          animation-delay: 8.85s;
+}
+.mast__text span:nth-child(178) {
+  -webkit-animation-delay: 8.9s;
+          animation-delay: 8.9s;
+}
+.mast__text span:nth-child(179) {
+  -webkit-animation-delay: 8.95s;
+          animation-delay: 8.95s;
+}
+.mast__text span:nth-child(180) {
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+@-webkit-keyframes letter-glow {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+  }
+  66% {
+    opacity: 1;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+  }
+  77% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes letter-glow {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+  }
+  66% {
+    opacity: 1;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+  }
+  77% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
+  }
+}
+
+    img {
+      width: 100%;
+      max-width: 100vw;
+      object-fit: cover;
+      filter: contrast(100%) saturation(-100%) invert(100%);
+      opacity: 32%;
+
+      /*display: NONE;*/
+
+    };
+    video{
+      z-index: 1;
+    }
+    .majorhero {
+
+      position: absolute;
+      z-index: 0;
+      background-color: transparent;
+      width: 100%;
+      min-width: 100vw;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      /*position: fixed;*/
+      top:0;
+
+    }
+    .majorhero > video {
+      min-width: 88vw;
+      opacity: 0.09;
+      /*filter: contrast(100%) saturation(-100%) invert(100%);*/
+      
+    }
+
+
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+a:hover {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.app {
+  height: 100vh;
+}
+
+/* -------------
+Sidebar
+----------------*/
+.sidebar {
+  position: absolute;
+  width: 32.32vw;
+  left: 32vw;
+  height: 2.75em;
+  top: 0;
+  overflow: hidden;
+  background-color: #19222a;
+  -webkit-transform: translateZ(0);
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+  /*transform: translate(100%,0,0);*/
+  /*left: 99vw;*/
+  transition: all ease-out 1s !important;
+  z-index: 999;position: fixed;
+}
+.sidebar header {
+  cursor: pointer;
+  background-color: #09f;
+  width: 100%;
+  display: block;
+  padding: 0.75em 1em;
+  transition: all ease-out 1s !important;
+  /*display: none;*/
+}
+
+
+
+/* -------------
+Sidebar Nav
+----------------*/
+.sidebar-nav {
+  position: fixed;
+  background-color: #19222a;
+  height: 100%;
+  font-weight: 400;
+  font-size: 1.2em;
+  overflow: auto;
+  padding-bottom: 6em;
+  z-index: 9;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* -------------
+  Chev elements
+  ----------------*/
+  /* -------------
+  Nav-Flyout
+  ----------------*/
+  /* -------------
+  Hover
+  ----------------*/
+}
+.sidebar-nav ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav ul li {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  width: 100%;
+  /* -------------
+  Sidebar: icons
+  ----------------*/
+}
+.sidebar-nav ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  font-size: 0.75em;
+  padding: 1.05em 1em;
+  position: relative;
+  display: block;
+}
+.sidebar-nav ul li a:active {
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.sidebar-nav ul li i {
+  font-size: 1.8em;
+  padding-right: 0.5em;
+  width: 9em;
+  display: inline;
+  vertical-align: middle;
+}
+.sidebar-nav > ul > li > a:after {
+  content: '\f125';
+  font-family: ionicons;
+  font-size: 0.5em;
+  width: 10px;
+  color: #fff;
+  position: absolute;
+  right: 0.75em;
+  top: 45%;
+}
+.sidebar-nav .nav-flyout {
+  position: absolute;
+  background-color: #080D11;
+  z-index: 9;
+  left: 2.5em;
+  top: 0;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 1.5s ease;
+  -moz-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+.sidebar-nav .nav-flyout a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.sidebar-nav ul > li:hover .nav-flyout {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.ex {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.icon-right{
+  color: #222;
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  visibility: hidden;
+  transition: all ease 0.1s;
+  animation: openAnime linear 0.5s;
+}
+@keyframes openAnime{
+  0%{
+    opacity: 0
+  }
+  100%{opacity: 1}
+}
+
+#ex-button {
+ transform: scale(1.5);
+}
+.openy {
+  min-height: 750px !important;
+ transition: all ease-out 2s !important;
+}
+.closedy {
+  max-height: 50px;
+  transition: all ease-in 2s !important;
+}
+
+
+
+
+
+
+.bubbly-button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ff0081;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+
+#cta-bubbly-button {
+  position: absolute;
+  z-index: 9999;
+  top:75vh;
+  left:60vw;
+}
+
+@media screen and (min-width: 550px) {
+  .sidebar {
+    width: 32.23vw !important;
+  }
+}
+
+@media screen and (max-width: 500px){
+  body  { 
+    font-size: 1em;
+    line-height: 1.32;}
+}
+.mast__header  {
+  font-size: 0.8em;
+  transform: translate3d(0,14px,0);
+}
+.c-services {
+  margin-top: -12vh !important;
+  cursor: pointer;
+}
+
+#cta-bubbly-button {
+  position: absolute;
+  z-index: 9999;
+  top:68vh;
+  left:57vw;
+  transform: scale(0.9);
+  padding: 15px 21px 15px 21px;
+}
+
+.sidebar {
+  width: 67vw;
+}
+
+}
+
+
+.hoold video,
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.hoold {
+  width: 100vw;height: 100vh
+}
+.hoold > h1 {
+
+  font-size: 20vw;
+  font-family: Biko, sans-serif;
+  font-weight: 700;
+  line-height: 100vh;
+  text-transform: uppercase;
+  text-align: center;
+  background: white;
+  mix-blend-mode: screen;
+
+}
+.hoold video {
+  object-fit: cover;
+}
+
+
+
+
+
+.hide {
+  display: none;
+}
+
+.button {
+  background: #000;
+  display: block;
+  padding: 1.4em 1.7em;
+  font-size: .8em;
+  text-align: center;
+}
+.button:hover {
+  background: #fc7f1d;
+}
+
+.nav {
+  position: fixed;
+  z-index: 8;
+  bottom: 0;
+  left: 0;
+}
+
+.next {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2px;
+  text-align: center;
+  font-size: .6em;
+  float: left;
+}
+.next em {
+  display: block;
+  opacity: .5;
+  padding: 2px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.next img {
+  opacity: .8;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.next:hover {
+  background: #000;
+}
+.next:hover img {
+  opacity: 1;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.highlight {
+  position: fixed;
+  top: 200px;
+  left: 100px;
+  z-index: 5;
+}
+.highlight span {
+  content: ' ';
+  width: 1px;
+  display: block;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  top: 9px;
+  left: 19px;
+  height: 1px;
+  overflow: hidden;
+  transition: all .4s;
+}
+.highlight em {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.featured-story .thumb {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.featured-story .thumb img {
+  width: 100%;
+}
+.featured-story .thumb:before {
+  content: ' ';
+  background: #000;
+  width: 60px;
+  height: 60px;
+  border-right: 4px solid #fff;
+  position: absolute;
+  top: -31px;
+  left: -31px;
+  transform: rotate(45deg);
+}
+.featured-story .thumb:after {
+  content: '\f144';
+  font-family: 'FontAwesome';
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2em;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+}
+.featured-story .title {
+  position: relative;
+  margin: 40px;
+  z-index: 3;
+  float: right;
+  width: 300px;
+  color: #fff;
+  border: 4px solid #fff;
+  transition: all .3s ease-in;
+}
+.featured-story h1 {
+  font-size: 2em;
+  margin: 40px 30px 10px;
+}
+.featured-story p {
+  font-size: .8em;
+  line-height: 1.4em;
+  margin: 0 30px 40px;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 2s ease-out;
+}
+
+.middle-section-2 {
+height: auto;width: 75vw;min-height: 80vh;margin: auto;margin-top: 25vh;
+}
+
+
+@media (min-width: 40.625em) {
+  :root {
+    --s0: calc(1.25rem + 0.333vw);
+  }
+}
+@media (min-width: 48em) {
+  :root {
+    --s0: calc(1.4rem + 0.333vw);
+  }
+}
+@media (min-width: 62em) {
+  :root {
+    --s0: calc(1.6rem + 0.333vw);
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 
   </style>
+ 
 </head>
 <body>
   <div class="dabody">
@@ -75,19 +1607,19 @@
           <a href="#"><i class="ion-ios-briefcase-outline"></i> <span class="">Folio</span></a>
           <ul class="nav-flyout">
             <li>
-              <a href="loganwemploy.github.io/dashUI-organizedchecklist.html"><i class="ion-ios-flame-outline"></i>organized checklist dash</a>
+              <a href="#"><i class="ion-ios-flame-outline"></i>folio1</a>
             </li>
             <li>
-              <a href="loganwemploy.github.io/UI-loginform.html"><i class="ion-ios-lightbulb-outline"></i>login form</a>
+              <a href="#"><i class="ion-ios-lightbulb-outline"></i>folio2</a>
             </li>
             <li>
-              <a href="loganwemploy.github.io/dash-UIorganized.html"><i class="ion-ios-location-outline"></i>organized ui dash</a>
+              <a href="#"><i class="ion-ios-location-outline"></i>folio3</a>
             </li>
             <li>
-              <a href="loganwemploy.github.io/dashUI-material.html"><i class="ion-ios-locked-outline"></i>material dash</a>
+              <a href="#"><i class="ion-ios-locked-outline"></i>folio4</a>
             </li>
              <li>
-              <a href="loganwemploy.github.io/figmyapp.html"><i class="ion-ios-navigate-outline"></i>figmyapp ui</a>
+              <a href="#"><i class="ion-ios-navigate-outline"></i>folio5</a>
             </li>
           </ul>
         </li>
@@ -184,8 +1716,6 @@ I observed that whether it was a big company with a big budget or a small busine
           <br>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat commodi modi nesciunt magni at explicabo quam praesentium reprehenderit tenetur numquam id, quasi sed quia quos! Iusto accusantium, cupiditate accusamus expedita in. Culpa neque blanditiis dicta molestiae error doloremque maxime iusto ea quaerat, quam, laborum quis nesciunt quos autem rerum voluptates quae nobis quia deleniti, velit, iure molestias nemo. Voluptas magnam consequatur maiores nulla est aspernatur incidunt eveniet.</p>
           <br>
-<br />
-
 
           <p>Consectetur adipisicing elit. Nihil quaerat quasi aliquam esse nostrum facere error enim, architecto asperiores harum laboriosam vitae totam in? Molestias quae, iste cupiditate dolor sequi facere quidem esse. Quas distinctio, aut harum beatae eligendi aliquid ducimus quod tempora earum ex.</p>
         </div>
@@ -231,244 +1761,6 @@ I observed that whether it was a big company with a big budget or a small busine
       <p>It&rsquo;s important to research deeply for the product you want to build. We help in that by defining the user audience, working on user stories, competitive analysis and much more. </p>
     </li>
   </ul>
-</section>
-<section>
-  <p class="codyhouse">link to the site of Codyhouse: <a href="https://codyhouse.co/gem/schedule-template/">https://codyhouse.co/gem/schedule-template/</a></p>
-<div class="cd-schedule loading">
-  <div class="timeline">
-    <ul>
-      <li><span>09:00</span></li>
-      <li><span>09:30</span></li>
-      <li><span>10:00</span></li>
-      <li><span>10:30</span></li>
-      <li><span>11:00</span></li>
-      <li><span>11:30</span></li>
-      <li><span>12:00</span></li>
-      <li><span>12:30</span></li>
-      <li><span>13:00</span></li>
-      <li><span>13:30</span></li>
-      <li><span>14:00</span></li>
-      <li><span>14:30</span></li>
-      <li><span>15:00</span></li>
-      <li><span>15:30</span></li>
-      <li><span>16:00</span></li>
-      <li><span>16:30</span></li>
-      <li><span>17:00</span></li>
-      <li><span>17:30</span></li>
-      <li><span>18:00</span></li>
-    </ul>
-  </div> <!-- .timeline -->
-
-  <div class="events">
-    <ul class="wrap">
-      <li class="events-group">
-        <div class="top-info"><span>Monday</span></div>
-        <ul>
-          <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
-            <a href="#0">
-              <em class="event-name">Abs Circuit</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
-            <a href="#0">
-              <em class="event-name">Rowing Workout</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3">
-            <a href="#0">
-              <em class="event-name">Yoga Level 1</em>
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="events-group">
-        <div class="top-info"><span>Tuesday</span></div>
-
-        <ul>
-          <li class="single-event" data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2">
-            <a href="#0">
-              <em class="event-name">Rowing Workout</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="11:30" data-end="13:00"  data-content="event-restorative-yoga" data-event="event-4">
-            <a href="#0">
-              <em class="event-name">Restorative Yoga</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1">
-            <a href="#0">
-              <em class="event-name">Abs Circuit</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3">
-            <a href="#0">
-              <em class="event-name">Yoga Level 1</em>
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="events-group">
-        <div class="top-info"><span>Wednesday</span></div>
-
-        <ul>
-          <li class="single-event" data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4">
-            <a href="#0">
-              <em class="event-name">Restorative Yoga</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="10:45" data-end="11:45" data-content="event-yoga-1" data-event="event-3">
-            <a href="#0">
-              <em class="event-name">Yoga Level 1</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="12:00" data-end="13:45"  data-content="event-rowing-workout" data-event="event-2">
-            <a href="#0">
-              <em class="event-name">Rowing Workout</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="13:45" data-end="15:00" data-content="event-yoga-1" data-event="event-3">
-            <a href="#0">
-              <em class="event-name">Yoga Level 1</em>
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="events-group">
-        <div class="top-info"><span>Thursday</span></div>
-
-        <ul>
-          <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
-            <a href="#0">
-              <em class="event-name">Abs Circuit</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="12:00" data-end="13:45" data-content="event-restorative-yoga" data-event="event-4">
-            <a href="#0">
-              <em class="event-name">Restorative Yoga</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="15:30" data-end="16:30" data-content="event-abs-circuit" data-event="event-1">
-            <a href="#0">
-              <em class="event-name">Abs Circuit</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="17:00" data-end="18:30"  data-content="event-rowing-workout" data-event="event-2">
-            <a href="#0">
-              <em class="event-name">Rowing Workout</em>
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="events-group">
-        <div class="top-info"><span>Friday</span></div>
-
-        <ul>
-          <li class="single-event" data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2">
-            <a href="#0">
-              <em class="event-name">Rowing Workout</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="12:30" data-end="14:00" data-content="event-abs-circuit" data-event="event-1">
-            <a href="#0">
-              <em class="event-name">Abs Circuit</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3">
-            <a href="#0">
-              <em class="event-name">Yoga Level 1</em>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <!--        -->
-      <li class="events-group">
-        <div class="top-info"><span>Saturday</span></div>
-        <ul>
-          <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
-            <a href="#0">
-              <em class="event-name">Abs Circuit</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
-            <a href="#0">
-              <em class="event-name">Rowing Workout</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3">
-            <a href="#0">
-              <em class="event-name">Yoga Level 1</em>
-            </a>
-          </li>
-        </ul>
-      </li>
-<!--        -->
-      
-      <!--        -->
-      <li class="events-group">
-        <div class="top-info"><span>Sunday</span></div>
-        <ul>
-          <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
-            <a href="#0">
-              <em class="event-name">Abs Circuit</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
-            <a href="#0">
-              <em class="event-name">Rowing Workout</em>
-            </a>
-          </li>
-
-          <li class="single-event" data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3">
-            <a href="#0">
-              <em class="event-name">Yoga Level 1</em>
-            </a>
-          </li>
-        </ul>
-      </li>
-<!--        -->
-    </ul>
-  </div>
-
-  <div class="event-modal">
-    <header class="header">
-      <div class="content">
-        <span class="event-date"></span>
-        <h3 class="event-name"></h3>
-      </div>
-
-      <div class="header-bg"></div>
-    </header>
-
-    <div class="body">
-      <div class="event-info"></div>
-      <div class="body-bg"></div>
-    </div>
-
-    <a href="#0" class="close">Close</a>
-  </div>
-
-  <div class="cover-layer"></div>
-</div> <!-- .cd-schedule -->
 </section>
 <style>
   .ox{display: block;
@@ -625,405 +1917,35 @@ for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener('click', animateButton, false);
 }
 </script>
-<script>
-  const loadStyleSheet = src => {
-    if(document.createStyleSheet){
-        document.createStyleSheet(src)
-    }  else {
-      const stylesheet = document.createElement('link');
-      stylesheet.href = src;
-      stylesheet.type = 'text/css';
-      document.getElementsByTagName("head")[0].appendChild(stylesheet);
-    }
-  }
 
-  window.onload() = function(){
-    console.log('window done');
-    loadStyleSheet('./css.css')
-
-  }
-</script>
-<script>jQuery(document).ready(function($){
-  var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
-  var transitionsSupported = ( $('.csstransitions').length > 0 );
-  //if browser does not support transitions - use a different event to trigger them
-  if( !transitionsSupported ) transitionEnd = 'noTransition';
-  
-  //should add a loding while the events are organized 
-
-  function SchedulePlan( element ) {
-    this.element = element;
-    this.timeline = this.element.find('.timeline');
-    this.timelineItems = this.timeline.find('li');
-    this.timelineItemsNumber = this.timelineItems.length;
-    this.timelineStart = getScheduleTimestamp(this.timelineItems.eq(0).text());
-    //need to store delta (in our case half hour) timestamp
-    this.timelineUnitDuration = getScheduleTimestamp(this.timelineItems.eq(1).text()) - getScheduleTimestamp(this.timelineItems.eq(0).text());
-
-    this.eventsWrapper = this.element.find('.events');
-    this.eventsGroup = this.eventsWrapper.find('.events-group');
-    this.singleEvents = this.eventsGroup.find('.single-event');
-    this.eventSlotHeight = this.eventsGroup.eq(0).children('.top-info').outerHeight();
-
-    this.modal = this.element.find('.event-modal');
-    this.modalHeader = this.modal.find('.header');
-    this.modalHeaderBg = this.modal.find('.header-bg');
-    this.modalBody = this.modal.find('.body'); 
-    this.modalBodyBg = this.modal.find('.body-bg'); 
-    this.modalMaxWidth = 800;
-    this.modalMaxHeight = 480;
-
-    this.animating = false;
-
-    this.initSchedule();
-  }
-
-  SchedulePlan.prototype.initSchedule = function() {
-    this.scheduleReset();
-    this.initEvents();
-  };
-
-  SchedulePlan.prototype.scheduleReset = function() {
-    var mq = this.mq();
-    if( mq == 'desktop' && !this.element.hasClass('js-full') ) {
-      //in this case you are on a desktop version (first load or resize from mobile)
-      this.eventSlotHeight = this.eventsGroup.eq(0).children('.top-info').outerHeight();
-      this.element.addClass('js-full');
-      this.placeEvents();
-      this.element.hasClass('modal-is-open') && this.checkEventModal();
-    } else if(  mq == 'mobile' && this.element.hasClass('js-full') ) {
-      //in this case you are on a mobile version (first load or resize from desktop)
-      this.element.removeClass('js-full loading');
-      this.eventsGroup.children('ul').add(this.singleEvents).removeAttr('style');
-      this.eventsWrapper.children('.grid-line').remove();
-      this.element.hasClass('modal-is-open') && this.checkEventModal();
-    } else if( mq == 'desktop' && this.element.hasClass('modal-is-open')){
-      //on a mobile version with modal open - need to resize/move modal window
-      this.checkEventModal('desktop');
-      this.element.removeClass('loading');
-    } else {
-      this.element.removeClass('loading');
-    }
-  };
-
-  SchedulePlan.prototype.initEvents = function() {
-    var self = this;
-
-    this.singleEvents.each(function(){
-      //create the .event-date element for each event
-      var durationLabel = '<span class="event-date">'+$(this).data('start')+' - '+$(this).data('end')+'</span>';
-      $(this).children('a').prepend($(durationLabel));
-
-      //detect click on the event and open the modal
-      $(this).on('click', 'a', function(event){
-        event.preventDefault();
-        if( !self.animating ) self.openModal($(this));
-      });
-    });
-
-    //close modal window
-    this.modal.on('click', '.close', function(event){
-      event.preventDefault();
-      if( !self.animating ) self.closeModal(self.eventsGroup.find('.selected-event'));
-    });
-    this.element.on('click', '.cover-layer', function(event){
-      if( !self.animating && self.element.hasClass('modal-is-open') ) self.closeModal(self.eventsGroup.find('.selected-event'));
-    });
-  };
-
-  SchedulePlan.prototype.placeEvents = function() {
-    var self = this;
-    this.singleEvents.each(function(){
-      //place each event in the grid -> need to set top position and height
-      var start = getScheduleTimestamp($(this).attr('data-start')),
-        duration = getScheduleTimestamp($(this).attr('data-end')) - start;
-
-      var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
-        eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
-      
-      $(this).css({
-        top: (eventTop -1) +'px',
-        height: (eventHeight+1)+'px'
-      });
-    });
-
-    this.element.removeClass('loading');
-  };
-
-  SchedulePlan.prototype.openModal = function(event) {
-    var self = this;
-    var mq = self.mq();
-    this.animating = true;
-
-    //update event name and time
-    this.modalHeader.find('.event-name').text(event.find('.event-name').text());
-    this.modalHeader.find('.event-date').text(event.find('.event-date').text());
-    this.modal.attr('data-event', event.parent().attr('data-event'));
-
-    //update event content
-    this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
-      //once the event content has been loaded
-      self.element.addClass('content-loaded');
-    });
-
-    this.element.addClass('modal-is-open');
-
-    setTimeout(function(){
-      //fixes a flash when an event is selected - desktop version only
-      event.parent('li').addClass('selected-event');
-    }, 10);
-
-    if( mq == 'mobile' ) {
-      self.modal.one(transitionEnd, function(){
-        self.modal.off(transitionEnd);
-        self.animating = false;
-      });
-    } else {
-      var eventTop = event.offset().top - $(window).scrollTop(),
-        eventLeft = event.offset().left,
-        eventHeight = event.innerHeight(),
-        eventWidth = event.innerWidth();
-
-      var windowWidth = $(window).width(),
-        windowHeight = $(window).height();
-
-      var modalWidth = ( windowWidth*.8 > self.modalMaxWidth ) ? self.modalMaxWidth : windowWidth*.8,
-        modalHeight = ( windowHeight*.8 > self.modalMaxHeight ) ? self.modalMaxHeight : windowHeight*.8;
-
-      var modalTranslateX = parseInt((windowWidth - modalWidth)/2 - eventLeft),
-        modalTranslateY = parseInt((windowHeight - modalHeight)/2 - eventTop);
-      
-      var HeaderBgScaleY = modalHeight/eventHeight,
-        BodyBgScaleX = (modalWidth - eventWidth);
-
-      //change modal height/width and translate it
-      self.modal.css({
-        top: eventTop+'px',
-        left: eventLeft+'px',
-        height: modalHeight+'px',
-        width: modalWidth+'px',
-      });
-      transformElement(self.modal, 'translateY('+modalTranslateY+'px) translateX('+modalTranslateX+'px)');
-
-      //set modalHeader width
-      self.modalHeader.css({
-        width: eventWidth+'px',
-      });
-      //set modalBody left margin
-      self.modalBody.css({
-        marginLeft: eventWidth+'px',
-      });
-
-      //change modalBodyBg height/width ans scale it
-      self.modalBodyBg.css({
-        height: eventHeight+'px',
-        width: '1px',
-      });
-      transformElement(self.modalBodyBg, 'scaleY('+HeaderBgScaleY+') scaleX('+BodyBgScaleX+')');
-
-      //change modal modalHeaderBg height/width and scale it
-      self.modalHeaderBg.css({
-        height: eventHeight+'px',
-        width: eventWidth+'px',
-      });
-      transformElement(self.modalHeaderBg, 'scaleY('+HeaderBgScaleY+')');
-      
-      self.modalHeaderBg.one(transitionEnd, function(){
-        //wait for the  end of the modalHeaderBg transformation and show the modal content
-        self.modalHeaderBg.off(transitionEnd);
-        self.animating = false;
-        self.element.addClass('animation-completed');
-      });
-    }
-
-    //if browser do not support transitions -> no need to wait for the end of it
-    if( !transitionsSupported ) self.modal.add(self.modalHeaderBg).trigger(transitionEnd);
-  };
-
-  SchedulePlan.prototype.closeModal = function(event) {
-    var self = this;
-    var mq = self.mq();
-
-    this.animating = true;
-
-    if( mq == 'mobile' ) {
-      this.element.removeClass('modal-is-open');
-      this.modal.one(transitionEnd, function(){
-        self.modal.off(transitionEnd);
-        self.animating = false;
-        self.element.removeClass('content-loaded');
-        event.removeClass('selected-event');
-      });
-    } else {
-      var eventTop = event.offset().top - $(window).scrollTop(),
-        eventLeft = event.offset().left,
-        eventHeight = event.innerHeight(),
-        eventWidth = event.innerWidth();
-
-      var modalTop = Number(self.modal.css('top').replace('px', '')),
-        modalLeft = Number(self.modal.css('left').replace('px', ''));
-
-      var modalTranslateX = eventLeft - modalLeft,
-        modalTranslateY = eventTop - modalTop;
-
-      self.element.removeClass('animation-completed modal-is-open');
-
-      //change modal width/height and translate it
-      this.modal.css({
-        width: eventWidth+'px',
-        height: eventHeight+'px'
-      });
-      transformElement(self.modal, 'translateX('+modalTranslateX+'px) translateY('+modalTranslateY+'px)');
-      
-      //scale down modalBodyBg element
-      transformElement(self.modalBodyBg, 'scaleX(0) scaleY(1)');
-      //scale down modalHeaderBg element
-      transformElement(self.modalHeaderBg, 'scaleY(1)');
-
-      this.modalHeaderBg.one(transitionEnd, function(){
-        //wait for the  end of the modalHeaderBg transformation and reset modal style
-        self.modalHeaderBg.off(transitionEnd);
-        self.modal.addClass('no-transition');
-        setTimeout(function(){
-          self.modal.add(self.modalHeader).add(self.modalBody).add(self.modalHeaderBg).add(self.modalBodyBg).attr('style', '');
-        }, 10);
-        setTimeout(function(){
-          self.modal.removeClass('no-transition');
-        }, 20);
-
-        self.animating = false;
-        self.element.removeClass('content-loaded');
-        event.removeClass('selected-event');
-      });
-    }
-
-    //browser do not support transitions -> no need to wait for the end of it
-    if( !transitionsSupported ) self.modal.add(self.modalHeaderBg).trigger(transitionEnd);
-  }
-
-  SchedulePlan.prototype.mq = function(){
-    //get MQ value ('desktop' or 'mobile') 
-    var self = this;
-    return window.getComputedStyle(this.element.get(0), '::before').getPropertyValue('content').replace(/["']/g, '');
-  };
-
-  SchedulePlan.prototype.checkEventModal = function(device) {
-    this.animating = true;
-    var self = this;
-    var mq = this.mq();
-
-    if( mq == 'mobile' ) {
-      //reset modal style on mobile
-      self.modal.add(self.modalHeader).add(self.modalHeaderBg).add(self.modalBody).add(self.modalBodyBg).attr('style', '');
-      self.modal.removeClass('no-transition');  
-      self.animating = false; 
-    } else if( mq == 'desktop' && self.element.hasClass('modal-is-open') ) {
-      self.modal.addClass('no-transition');
-      self.element.addClass('animation-completed');
-      var event = self.eventsGroup.find('.selected-event');
-
-      var eventTop = event.offset().top - $(window).scrollTop(),
-        eventLeft = event.offset().left,
-        eventHeight = event.innerHeight(),
-        eventWidth = event.innerWidth();
-
-      var windowWidth = $(window).width(),
-        windowHeight = $(window).height();
-
-      var modalWidth = ( windowWidth*.8 > self.modalMaxWidth ) ? self.modalMaxWidth : windowWidth*.8,
-        modalHeight = ( windowHeight*.8 > self.modalMaxHeight ) ? self.modalMaxHeight : windowHeight*.8;
-
-      var HeaderBgScaleY = modalHeight/eventHeight,
-        BodyBgScaleX = (modalWidth - eventWidth);
-
-      setTimeout(function(){
-        self.modal.css({
-          width: modalWidth+'px',
-          height: modalHeight+'px',
-          top: (windowHeight/2 - modalHeight/2)+'px',
-          left: (windowWidth/2 - modalWidth/2)+'px',
-        });
-        transformElement(self.modal, 'translateY(0) translateX(0)');
-        //change modal modalBodyBg height/width
-        self.modalBodyBg.css({
-          height: modalHeight+'px',
-          width: '1px',
-        });
-        transformElement(self.modalBodyBg, 'scaleX('+BodyBgScaleX+')');
-        //set modalHeader width
-        self.modalHeader.css({
-          width: eventWidth+'px',
-        });
-        //set modalBody left margin
-        self.modalBody.css({
-          marginLeft: eventWidth+'px',
-        });
-        //change modal modalHeaderBg height/width and scale it
-        self.modalHeaderBg.css({
-          height: eventHeight+'px',
-          width: eventWidth+'px',
-        });
-        transformElement(self.modalHeaderBg, 'scaleY('+HeaderBgScaleY+')');
-      }, 10);
-
-      setTimeout(function(){
-        self.modal.removeClass('no-transition');
-        self.animating = false; 
-      }, 20);
-    }
-  };
-
-  var schedules = $('.cd-schedule');
-  var objSchedulesPlan = [],
-    windowResize = false;
-  
-  if( schedules.length > 0 ) {
-    schedules.each(function(){
-      //create SchedulePlan objects
-      objSchedulesPlan.push(new SchedulePlan($(this)));
-    });
-  }
-
-  $(window).on('resize', function(){
-    if( !windowResize ) {
-      windowResize = true;
-      (!window.requestAnimationFrame) ? setTimeout(checkResize) : window.requestAnimationFrame(checkResize);
-    }
-  });
-
-  $(window).keyup(function(event) {
-    if (event.keyCode == 27) {
-      objSchedulesPlan.forEach(function(element){
-        element.closeModal(element.eventsGroup.find('.selected-event'));
-      });
-    }
-  });
-
-  function checkResize(){
-    objSchedulesPlan.forEach(function(element){
-      element.scheduleReset();
-    });
-    windowResize = false;
-  }
-
-  function getScheduleTimestamp(time) {
-    //accepts hh:mm format - convert hh:mm to timestamp
-    time = time.replace(/ /g,'');
-    var timeArray = time.split(':');
-    var timeStamp = parseInt(timeArray[0])*60 + parseInt(timeArray[1]);
-    return timeStamp;
-  }
-
-  function transformElement(element, value) {
-    element.css({
-        '-moz-transform': value,
-        '-webkit-transform': value,
-      '-ms-transform': value,
-      '-o-transform': value,
-      'transform': value
-    });
-  }
-});</script>
+<!-- <noscript><link rel="stylesheet" href="./css.css"></noscript> -->
 </div>
+<!-- <script>   // to defer the loading of stylesheets
+        // just add it right before the </body> tag
+        // and before any javaScript file inclusion (for performance)  
+        function loadStyleSheet(src){
+            if (document.createStyleSheet) document.createStyleSheet(src);
+            else {
+                var stylesheet = document.createElement('link');
+                stylesheet.href = src;
+                stylesheet.rel = 'stylesheet';
+                stylesheet.type = 'text/css';
+                document.getElementsByTagName('head')[0].appendChild(stylesheet);
+            }
+        }</script> -->
+        <script>
+          
+        </script>
+       <script>
+    var cb = function() {
+    var l = document.createElement('link'); l.rel = 'stylesheet';
+    l.href = 'css.css';
+    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h); };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+              webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
+</script>
 </body>
 </html>
+<!-- <noscript><link rel="stylesheet" href="./css.css"></noscript> -->

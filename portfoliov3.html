@@ -1201,6 +1201,7 @@ Sidebar Nav
 }
 .icon-right{
   color: #222;
+  margin-top: 18px;
   width: 90%;
   position: relative;
   display: flex;
@@ -1343,6 +1344,8 @@ Sidebar Nav
   margin-top: -12vh !important;
   cursor: pointer;
 }
+
+.sidebar { height: 78px }
 
 #cta-bubbly-button {
   position: absolute;
@@ -1861,7 +1864,7 @@ Spanizer
 
   const major = () =>{
     let midNav = () => {
-       sideBar.style.height = '50px';
+       sideBar.style.height = '78px';
       iconRight.style.visibility = 'hidden';
     }
     // INITIAL OPEN
@@ -1878,7 +1881,7 @@ Spanizer
       console.log(cint);
       //close -> else open
   if(cint%2 != 0 ){
-    sideBar.style.height = '50px';
+    sideBar.style.height = '78px';
     iconRight.style.visibility = 'hidden';
     console.log('%cClosed','color:red;font-size:18px')
 

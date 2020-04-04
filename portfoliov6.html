@@ -650,7 +650,7 @@ a {
     content: "CSS";
   }
   40% {
-    content: "SASS";
+    content: "REACT";
   }
   60% {
     content: "JS";
@@ -1200,8 +1200,18 @@ a {
   top:67.5vh;
   left:62vw;
   transform: scale(1.2);
+  transition: all ease-in-out 2s;
 }
 
+@media screen and (max-width: 550px) {
+    #cta-bubbly-button {
+  position: absolute;
+  z-index: 9999;
+  top:13vh;
+  left:62vw;
+  transform: scale(1.2);
+}
+} 
 
             .mediaquery-padding {
         height: 100%;

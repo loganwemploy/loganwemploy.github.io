@@ -1926,12 +1926,41 @@ a {
 #cta-bubbly-button {
   position: absolute;
   z-index: 9999;
-  top: 7.5vh;
-  left:69.5vw;
+  top: 34.5vh;
+  left:21.5vw;
   transform: scale(1.2);
   transition: all ease-in-out 1.32s;
 }
+@media screen and (min-width: 936px) {
 
+#cta-bubbly-button {
+    position: absolute;
+    z-index: 9999;
+    top: 53.5vh;
+    left: 10.5vw;
+    transform: scale(1.2);
+    transition: all ease-in-out 1.32s;
+}
+
+.bubbly-button {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ff0081;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+}
 @media screen and (max-width: 550px) {
 .ui-logo {
         margin-top: 15px;

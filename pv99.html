@@ -2207,15 +2207,23 @@ figure figcaption {
 
 @media screen and (max-width: 500px){
 .img-wrapper-contains-src {
-    width: 88vw;
+    width: 100%;
+    background-color: red;
+    margin: auto;
+    text-align: center;
+
+
 }
 #History p {
     text-align: center;
     max-width: 88vw;
 }
 figure {
-  width: 67vw;
-  margin: auto;align-self: center;
+  display: flex;justify-content: center;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 10%;
+  height: 44%;
 }
 #History img {
   width: 67%;

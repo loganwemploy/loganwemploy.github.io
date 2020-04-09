@@ -2832,12 +2832,114 @@ figure figcaption {
   max-width: 88vw;
 }
 
+}
+
+.ui-pop-open {
+  height: 68.5vh;
+}
+
+#jaeger-specs {
+  border-collapse: collapse;
+  /*margin: 3rem auto;*/
+  width: 88vw;
+  margin: auto;
+
+}
+
+#jaeger-specs caption {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: Agency, sans-serif;
+}
+
+#jaeger-specs td,
+#jaeger-specs th {
+  text-align: center;
+  padding: 2rem;
+}
+
+#jaeger-specs th[scope] {
+  color: #fff;
+  background-color: #000;
+  font-weight: normal;
+}
+
+#jaeger-specs tbody {
+  border: 1px solid #222;
+}
+
+#jaeger-specs tbody th,
+#jaeger-specs tbody th + td {
+  text-align: left;
+  font-weight: normal;
+}
+
+#jaeger-specs tbody th {
+  font-size: 1.4rem;
+  border-right: 1px solid #222;
+  background-size: cover;
+  font-family: Agency, Arial, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+#jaeger-specs tbody tr:nth-child(1) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/gipsy-danger.jpg);
+}
+
+#jaeger-specs tbody tr:nth-child(2) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/striker-eureka.jpg);
+}
+
+#jaeger-specs tbody tr:nth-child(3) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/crimson-typhoon.jpg);
+}
+
+#jaeger-specs tbody tr:nth-child(4) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/coyote-tango.jpg);
+}
+
+#jaeger-specs tbody tr:nth-child(5) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cherno-alpha.jpg);
+}
+
+#jaeger-specs tbody tr:not(:last-child) {
+  border-bottom: 1px solid #222;
+}
+
+#jaeger-specs thead th[scope] {
+  border: 1px solid #222;
+  border-bottom: none;
+}
+
+#jaeger-specs tbody td:not(:last-child) {
+  border-right: 1px solid #222;
+}
+
+#jaeger-specs tbody td {
+  background-color: #5a5a5a;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23cccccc' fill-opacity='0.01' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #fff;
+   /*border-radius: 16px;*/
+}
+
+@media screen and (max-width: 500px) {
+  #jaeger-specs td,
+  #jaeger-specs th {
+    padding: .5rem;
+  }
+
+  #jaeger-specs th span {
+    display: none;
+  }
+}
+
 
 
 
 </style>
 </head>
 <body style="width: 100%;max-width: 100vw;">
+
     <nav>
   <div class="container">
     <ul class="navbar-left">
@@ -2891,7 +2993,8 @@ figure figcaption {
      <div class="heroed"><img src="https://placehold.it/200x200.jpg" alt=""></div>
     <div class="fluid-container">
         <div class="row">
-            <div class="col-3"><img class="ui-logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.craftbeer.com%2Fwp-content%2Fuploads%2FDeschutes-Brewery-logo-217-600x457.png&f=1&nofb=1" alt=""></div>
+          <!--   <div class="col-3"><img class="ui-logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.craftbeer.com%2Fwp-content%2Fuploads%2FDeschutes-Brewery-logo-217-600x457.png&f=1&nofb=1" alt=""></div> -->
+            <div class="col-3"><img class="ui-logo" src="https://dl3.pushbulletusercontent.com/bfnWWVEGYJUPTrLywRJi8cYywoJM6W7T/effectiveLogo23.png" alt=""></div>
             <div class="div col-5" style="visibility: hidden;"></div>
             <div class="div col-2" style="visibility:hidden;"></div>
             <div class="div col-2" style="visibility: hidden;"></div>
@@ -3119,7 +3222,7 @@ figure figcaption {
         </div>
 
         <div class="row" >
-            <div class="section-hero col-12" style="margin: 0;padding: 0;margin-top: 1em;border-radius: 0.68em;">
+            <div class="section-hero col-12" style="margin: 0;padding: 0;margin-top: 1em;">
                 <div id="wrapper">
   <h6 style="color: black;padding: 5px 7px 1em 2em;font-size: 0.75em;">Portfolio Summary</h6>
   
@@ -3186,7 +3289,49 @@ figure figcaption {
         </div>
 
         <div class="row">
-            <div style="background-color: rgba(255,255,255,0.2);">all to my own</div>
+            <div class="ui-pop-open" style="background-color: rgba(255,255,255,0.2);"><table id=jaeger-specs>
+<caption>Jaeger Technical Specifications</caption>
+<thead>
+<tr>
+<th></th>
+<th scope=col>Country
+<th scope=col>Height<span> (meters)</span> 
+<th scope=col>Weight<span> (tonnes)</span>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope=row>Item1 
+<td>United States
+<td>79
+<td>1980
+</tr>
+<tr>
+<th scope=row>Item2
+<td>Australia
+<td>76
+<td>1850
+</tr>
+<tr>
+<th scope=row>Item3
+<td>China
+<td>76
+<td>1722
+</tr>
+<tr>
+<th scope=row>Item4
+<td>Japan
+<td>86
+<td>2312
+</tr>
+<tr>
+<th scope=row>item5
+<td>Russia
+<td>85
+<td>2412
+</tr>
+</tbody>
+</table></div>
         </div>
         
         <div class="row">
@@ -3386,6 +3531,15 @@ for (var i = 0; i < bubblyButtons.length; i++) {
         <script>
           
         </script>
+          <script>
+      const input = ;
+    const varHeight = ;
+   function popOpen(){document.querySelector('.ui-pop-open').style.height = '35vh'} ;
+   popOpen();
+   // setTimeout(popOpen,2000)
+  
+  
+</script>
       <!--  <script>
     var cb = function() {
     var l = document.createElement('link'); l.rel = 'stylesheet';

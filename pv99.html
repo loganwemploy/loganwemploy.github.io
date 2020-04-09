@@ -1061,7 +1061,72 @@ a {
   stroke: transparent;
 }
 
+@media screen and (min-width: 936px){
+/*#cta-bubbly-button {
+    position: absolute;
+    z-index: 9999;
+    top: 53.5vh;
+    left: 10.5vw;
+    transform: scale(1.2);
+    tr*/ansition: all ease-in-out 1.32s;
+}
+#cta-bubbly-button {
+    position: absolute;
+    z-index: 9999;
+    top: 30.5vh;
+    left: 51.5vw;
+    transform: scale(1.2);
+    transition: all ease-in-out 1.32s;
+}
+}
+@media screen and (min-width: 936px){
+.bubbly-button {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ff0081;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.bubbly-button {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ff0081;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+}
 
+@media screen and (max-width: 650px){
+#cta-bubbly-button {
+    position: absolute;
+    z-index: 9999;
+    top: 30vh;
+    left: 51vw;
+    transform: scale(1.20);
+}
+}
 
 </style>
 </head>
@@ -1079,6 +1144,18 @@ a {
       <li style="list-style: none;"><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li>
     </ul> <!--end navbar-right -->
   </div> <!--end container --></div>
+            <!-- <div class="div">4</div>
+            <div class="div">5</div>
+            <div class="div">6</div>
+            <div class="div">7</div> -->
+           
+        </div>
+
+        <div class="row">
+            <div class="col-3"><img class="ui-logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.craftbeer.com%2Fwp-content%2Fuploads%2FDeschutes-Brewery-logo-217-600x457.png&amp;f=1&amp;nofb=1" alt=""></div>
+            <div class="div col-5" style="visibility: hidden;"></div>
+            <div class="div col-2" style="visibility:hidden;"></div>
+            <div class="div col-2" style="visibility: hidden;"></div>
             <!-- <div class="div">4</div>
             <div class="div">5</div>
             <div class="div">6</div>
@@ -1122,8 +1199,16 @@ a {
 
     <a href="#" class="button">Checkout</a>
   </div> <!--end shopping-cart --></div>
-        <div class="row" style="padding: 0;margin: 0;max-height: 220px;margin-top: 10px;display: flex;flex-direction: column;">
-            <h1 style="text-align: left;">Logan J Wilson</h1>
+       <div class="row" style="padding: 40px 0 0 60px;margin: 0;max-height
+        : 220px;margin-top: -5px;display: flex;flex-direction: column;"> 
+     
+            <h4 style="
+            max-width: 260px;
+            margin: -30px 0 0 -16px;
+    text-align: left;
+    font-size: 22px;
+    padding: 12px 0 69px 0;">Logan Wilson | Systems Design Engineer | UX-UI  | Full-Stack Developer</h4>
+    
             <!-- <h6 style="margin-top: -7.5vh;font-size: 1em;text-align: center;margin-left: -3.6em">System Design Engineer | UX-UI | Full-Stack Developer</h6> -->
         </div>
        <!-- style="background-image: url(https://placehold.it/500x500.jpg);background-repeat: no-repeat;background-size: cover;background-position: top" -->
@@ -1341,14 +1426,14 @@ a {
 }
 
 
-#cta-bubbly-button {
+/*#cta-bubbly-button {
   position: absolute;
   z-index: 9999;
   top:67.5vh;
   left:62vw;
   transform: scale(1.2);
 }
-
+*/
 
             .mediaquery-padding {
         height: 100%;
@@ -1369,6 +1454,755 @@ a {
                  .mediaquery-padding {padding-top: 1.5rem}
             }
             }
+
+
+
+
+            .ui-popup-table {
+  height: 67vh;
+}
+
+#popup-specs {
+  border-collapse: collapse;
+  /*margin: 3rem auto;*/
+  width: 88vw;
+}
+
+#popup-specs caption {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: Agency, sans-serif;
+}
+
+#popup-specs td,
+#popup-specs th {
+  text-align: center;
+  padding: 2rem;
+}
+
+#popup-specs th[scope] {
+  color: #fff;
+  background-color: #000;
+  font-weight: normal;
+}
+
+#popup-specs tbody {
+  border: 1px solid #222;
+}
+
+#popup-specs tbody th,
+#popup-specs tbody th + td {
+  text-align: left;
+  font-weight: normal;
+}
+
+#popup-specs tbody th {
+  font-size: 1.4rem;
+  border-right: 1px solid #222;
+  background-size: cover;
+  font-family: Agency, Arial, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+#popup-specs tbody tr:nth-child(1) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/gipsy-danger.jpg);
+}
+
+#popup-specs tbody tr:nth-child(2) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/striker-eureka.jpg);
+}
+
+#popup-specs tbody tr:nth-child(3) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/crimson-typhoon.jpg);
+}
+
+#popup-specs tbody tr:nth-child(4) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/coyote-tango.jpg);
+}
+
+#popup-specs tbody tr:nth-child(5) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cherno-alpha.jpg);
+}
+
+#popup-specs tbody tr:not(:last-child) {
+  border-bottom: 1px solid #222;
+}
+
+#popup-specs thead th[scope] {
+  border: 1px solid #222;
+  border-bottom: none;
+}
+
+#popup-specs tbody td:not(:last-child) {
+  border-right: 1px solid #222;
+}
+
+#popup-specs tbody td {
+  background-color: #377fd0;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23f2f2f2' fill-opacity='0.01' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  #popup-specs td,
+  #popup-specs th {
+    padding: .5rem;
+  }
+
+  #popup-specs th span {
+    display: none;
+  }
+}
+
+
+
+figure {
+  width: 275px;
+    margin: 0;
+    padding: 10px 14px;
+    background: #0048AA;
+    border: 1px solid #ddd;
+    /* border-radius: 4px; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
+    float: left;
+    margin: 1.44em 2em 1em 0;
+    position: relative;
+}
+figure .img-wrapper-contains-src {
+  cursor: crosshair;
+  position: relative;
+  line-height: 1;
+}
+figure .img-wrapper-contains-src .fig-source {
+  pointer-events: none;
+  line-height: auto;
+  position: absolute;
+  background: rgba(143, 188, 143, 0.64);
+  -webkit-transition: opacity 300ms, -webkit-transform 50ms;
+  transition: opacity 300ms, -webkit-transform 50ms;
+  transition: opacity 300ms, transform 50ms;
+  transition: opacity 300ms, transform 50ms, -webkit-transform 50ms;
+  margin: 0;
+  padding: .3em .7em;
+  color: white;
+  font-size: 14px !important;
+  opacity: 0;
+  z-index: 1;
+}
+figure .img-wrapper-contains-src img {
+  width: 100%;
+}
+figure .img-wrapper-contains-src:hover .fig-source {
+  opacity: 1;
+}
+figure figcaption {
+  padding: .7em 0 .5em;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  color: ghostwhite;
+}
+
+.page__header .navbar {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 0 2em;
+  background: #eee;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.17);
+  position: relative;
+  z-index: 99;
+}
+.page__header .navbar .brand .page__title {
+  margin: 0;
+  letter-spacing: -0.04em;
+  font-size: 24px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  top: 2px;
+}
+.page__header .navbar .brand .page__title small {
+  font-weight: 300;
+  font-size: 12px;
+  background: darkseagreen;
+  /* border-radius: 50px; */
+  padding: .3em 1em .25em;
+  color: white;
+  margin-left: .9em;
+  position: relative;
+  top: 12px;
+}
+.page__header .navbar .navbar__drawer-toggle {
+  background: transparent;
+  border: 0;
+  padding: 1.3em 0;
+  margin: 0;
+  outline: 0;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines {
+  margin-left: auto;
+  direction: rtl;
+  width: 35px;
+  cursor: pointer;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: darkseagreen;
+  border-radius: 50px;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:not(:last-child) {
+  margin-bottom: .35rem;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1) {
+  width: 14px;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1):after {
+  left: -19px;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2) {
+  width: 8px;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2):after {
+  left: -13px;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3) {
+  width: 22px;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3):after {
+  left: -27px;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: darkseagreen;
+  border-radius: 50%;
+  position: relative;
+  left: -30px;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines:hover span {
+  width: 30px;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(1):after {
+  width: 16px;
+  border-radius: 50px;
+  left: 0px;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(2):after {
+  width: 22px;
+  border-radius: 50px;
+  left: 0;
+}
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(3):after {
+  width: 8px;
+  border-radius: 50px;
+  left: 0;
+}
+.page__header .navbar .navbar__drawer {
+  /* display: none; */
+  position: absolute;
+  width: 100%;
+  bottom: -67px;
+  background: white;
+  left: 0;
+}
+.page__header .navbar .navbar__drawer .navbar__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+}
+.page__header .navbar .navbar__drawer .navbar__menu li a {
+  display: block;
+  padding: 1.7em 2em 1.5em;
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  font-weight: 900;
+  box-sizing: border-box;
+  font-size: 13.6px;
+}
+.page__header .navbar .navbar__drawer .navbar__menu li a:hover {
+  background: rgba(0, 0, 0, 0.67);
+  color: white;
+}
+
+.hero-intro {
+  background: #222222 url(https://lh3.googleusercontent.com/QiUBd1a05CCjiQImRHNVn4W_3YA4QwaAP5OXaTeWJ1aac5A0JC3LkaYqAmNrC14F2p1ArNk6BV67iBg4bSTpbsZlij07ciqHDOeY7bV9lNA=s1600);
+  color: white;
+  padding: 4em;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 4em;
+  display: flex;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: 50% 0;
+}
+.hero-intro__right .open-dates {
+  margin-bottom: 2em;
+}
+.hero-intro__right .open-dates p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.hero-intro__right .open-dates p:last-child {
+  color: rgba(255, 255, 255, 0.7);
+}
+.hero-intro__right .museum-shop-link {
+  color: white;
+  text-decoration: none;
+  padding: 1em 3.2em 1em 2em;
+  font-weight: 600;
+  font-size: 15px;
+  background: darkseagreen;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  position: relative;
+  border-radius: 50px;
+}
+.hero-intro__right .museum-shop-link svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  right: 21px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.hero-intro__right .museum-shop-link:hover {
+  background: #222;
+  color: white;
+}
+.hero-intro__right .museum-shop-link:hover svg {
+  fill: white;
+}
+.hero-intro__right blockquote {
+  margin: 0 0 3rem 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #e2e9e2;
+  z-index: 1;
+  position: relative;
+}
+.hero-intro__right blockquote p {
+  margin: 0;
+  font-size: 14px;
+  width: 180px;
+  position: relative;
+}
+.hero-intro__right blockquote:after, .hero-intro__right blockquote p:after {
+  content: "";
+  display: block;
+  width: 100%;
+  background: #a6a6a6;
+  border-radius: 50px;
+  position: absolute;
+  z-index: -1;
+}
+.hero-intro__right blockquote:after {
+  height: 9px;
+  top: 15px;
+}
+.hero-intro__right blockquote p:after {
+  height: 6px;
+  top: 13px;
+}
+.hero-intro__left p {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 800;
+  width: 202px;
+  line-height: 1.4;
+  text-align: right;
+  background: darkseagreen;
+  color: white;
+  padding: .5em .7em .35em;
+  text-transform: uppercase;
+}
+.hero-intro__left p small {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.page__content {
+  padding: 2em 3em;
+}
+.page__content article a {
+  position: relative;
+}
+.page__content article a::before, .page__content article a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: rgba(143, 188, 143, 0.6);
+  -webkit-transition: width 300ms;
+  transition: width 300ms;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+}
+.page__content article a::after {
+  width: 0;
+  background: darkseagreen;
+}
+.page__content article a:hover::after {
+  width: 100%;
+  left: 0;
+}
+.page__content article #intro {
+  background: rgba(156, 176, 156, 0.13);
+  padding: 1em 1.2em 0.2em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0 3rem;
+  border-radius: 2px;
+}
+.page__content article #intro p {
+  font-size: 17px;
+  font-weight: 600;
+}
+.page__content article p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.page__footer {
+      background: #222;
+    color: #e2e9e2;
+    /* padding: 2em 3em; */
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    border-top: 6px solid #a6a6a6;
+    margin-top: 3rem;
+    margin-left: -50px;
+    width: 100%;
+    min-width: 100vw;
+}
+.page__footer .footer__right {
+  /*margin-right: 1em;*/
+}
+.page__footer .footer__right .vgm-social {
+  padding: 0;
+  margin: .4em 0 0 0;
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+}
+.page__footer .footer__right .vgm-social li a {
+  color: inherit;
+  /*margin-right: .5em;*/
+  display: block;
+  width: 40px;
+  height: 24px;
+  background: #a6a6a6;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.page__footer .footer__right .vgm-social li a i {
+  color: rgba(255, 255, 255, 0.8);
+}
+.page__footer .footer__right .vgm-social li a:hover {
+  background: darkseagreen;
+}
+.page__footer .footer__right .newsletter {
+  color: #222;
+}
+.page__footer .footer__right .newsletter .subscribe__title {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.page__footer .footer__right .newsletter .subscribe__text {
+  color: #e2e9e2;
+  margin-top: 0;
+  font-size: 14px;
+}
+.page__footer .footer__right .newsletter .subscribe__form {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect {
+  /*margin-right: .5em;*/
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__button {
+  width: 158px;
+  background: white;
+  padding: .7em 3em .7em 0;
+  border-radius: 2px;
+  font-size: 15px;
+  height: 23px;
+  line-height: 1.5;
+  cursor: pointer;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  box-shadow: 0 0 0 3px rgba(89, 171, 149, 0);
+  border: 1px solid transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__button::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 5px solid #ababab;
+  position: absolute;
+  /*right: 1.2em;*/
+  top: 50%;
+  margin-top: -2px;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container {
+  display: none;
+  position: relative;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container.multiselect__container-show {
+  display: block;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container .multiselect__select.phone-only {
+  display: none;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container .multiselect__dropdown-container {
+  background: white;
+  padding: 1.5em;
+  border-radius: 2px;
+  position: absolute;
+  top: -13em;
+  left: -3px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.09);
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container .multiselect__dropdown-container .multiselect__dropdown {
+  -webkit-columns: 2;
+  width: 650px;
+  -webkit-column-width: 30px;
+     -moz-column-width: 30px;
+          column-width: 30px;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container .multiselect__dropdown-container .multiselect__dropdown .multiselect__item {
+  margin-bottom: .3em;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container .multiselect__dropdown-container .multiselect__dropdown .multiselect__item::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 1px solid #969696;
+  border-radius: 1px;
+  top: 7px;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container .multiselect__dropdown-container .multiselect__dropdown .multiselect__item.multiselect__item_checked::before {
+  border-color: darkseagreen;
+  background: darkseagreen url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9u%0D%0AZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2Zp%0D%0AbHRlcjBfZCkiPgo8cGF0aCBkPSJNMiA0LjVMNCA2LjVMNy41IDEiIHN0cm9rZT0id2hpdGUiIHN0%0D%0Acm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0i%0D%0Acm91bmQiLz4KPC9nPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9kIiB4PSIwLjI1IiB5PSIw%0D%0ALjI0OTkwNSIgd2lkdGg9IjkuMDAwMDkiIGhlaWdodD0iOS4wMDAxIiBmaWx0ZXJVbml0cz0idXNl%0D%0AclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29k%0D%0AIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9y%0D%0ATWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAw%0D%0AIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIi8+CjxmZU9mZnNldCBkeT0iMSIvPgo8ZmVH%0D%0AYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIwLjUiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0%0D%0Acml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMTUgMCIv%0D%0APgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9%0D%0AImVmZmVjdDFfZHJvcFNoYWRvdyIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluPSJTb3VyY2VH%0D%0AcmFwaGljIiBpbjI9ImVmZmVjdDFfZHJvcFNoYWRvdyIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRl%0D%0Acj4KPC9kZWZzPgo8L3N2Zz4K) no-repeat 0 1px;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect .multiselect__container .multiselect__dropdown-container .multiselect__dropdown .multiselect__item-title {
+  font-size: 14px;
+  margin-left: 1.7em;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect.multiselect_open .multiselect__button {
+  box-shadow: 0 0 0 3px rgba(143, 188, 143, 0.35);
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect.multiselect_open .multiselect__button::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__multiselect .multiselect.multiselect_open .multiselect__container {
+  display: block;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__input {
+  margin-right: .5em;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__input input {
+  border: 0;
+  background: white;
+  padding: .767em 1em;
+  border-radius: 2px;
+  font-size: 15px;
+  height: 23px;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+  font-family: inherit;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__input input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(143, 188, 143, 0.35);
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__button button {
+  all: unset;
+  background: -webkit-gradient(linear, left top, left bottom, from(darkseagreen), to(#80b380));
+  background: linear-gradient(darkseagreen, #80b380);
+  color: white;
+  padding: .767em 1.5em;
+  line-height: 1.55;
+  border-radius: 2px;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-transition: obacity 150ms ease;
+  transition: obacity 150ms ease;
+  font-weight: 700;
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__button button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9cc99c), to(#7ab87a));
+  background: linear-gradient(#9cc99c, #7ab87a);
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__button button:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+  box-shadow: inset 0 0 17px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(180deg, #80b380 0, #79af79 2px, darkseagreen 0, darkseagreen);
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__button button:focus {
+  box-shadow: 0 0 0 3px rgba(143, 188, 143, 0.35);
+}
+.page__footer .footer__right .newsletter .subscribe__form .subscribe__button button[disabled] {
+  opacity: .5;
+  pointer-events: none;
+}
+.page__footer .footer__left .now-on-view {
+  background: url(https://lh3.googleusercontent.com/75iMTn8Y_Pyu0aTL6f8Q-v0o3P8zU3TkBihU0glA_IhG10LuRn7FfE1sfvX6bD7sngxror9sf8ZkS65_fTpvTr_52438_jXJBRaK7PjwM_E=s540);
+  background-size: cover;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.page__footer .footer__left .now-on-view a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 270px;
+  padding: 1em 1.6em;
+}
+.page__footer .footer__left .now-on-view a h5 {
+  margin: 0 0 1.4em 0;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  position: relative;
+}
+.page__footer .footer__left .now-on-view a h5::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 0;
+  border: 1px solid;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -13px;
+}
+.page__footer .footer__left .now-on-view a p {
+  margin: 0;
+  line-height: 1.45;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  position: relative;
+}
+.page__footer .footer__left .now-on-view a p svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  border-radius: 50%;
+}
+.page__footer .footer__left .now-on-view:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+}
+.page__footer .footer__left .now-on-view:hover a p {
+  text-decoration: underline;
+}
+.page__footer .footer__left .now-on-view:hover a p svg {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  background: white;
+  fill: #524d3c;
+}
+.page__footer .footer__left .links-group {
+  padding: 0;
+  margin: 0 0 .6em 0;
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.page__footer .footer__left .links-group li:first-child {
+  margin-right: 14px;
+}
+.page__footer .footer__left .links-group li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: inherit;
+  display: inline-block;
+  padding: .4em 1.2em .1em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  text-transform: uppercase;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.page__footer .footer__left .links-group li a:hover {
+  border: 1px solid #e2e9e2;
+  color: #222;
+  background: #e2e9e2;
+}
+.page__footer .footer__left .copyrights {
+  text-align: center;
+  margin: 0;
+}
+
+#History p {
+  text-align: left;
+}
         </style>
 <!-- at 1155px wide and below - padding top need to be increased to create tighter visuals. -->
 <!-- 545px wide and below padding on lvl3 -->
@@ -1513,10 +2347,100 @@ a {
             
         </div>
 
-        <div class="row">
-            <div style="background-color: rgba(255,255,255,0.2);">all to my own</div>
+              <div class="row">
+            <div class="ui-popup-table" style="background-color: rgba(255,255,255,0.2);">
+              <table id="popup-specs">
+<caption>popup Technical Specifications</caption>
+<thead>
+<tr>
+<th></th>
+<th scope="col">Country
+</th><th scope="col">Height<span> (meters)</span> 
+</th><th scope="col">Weight<span> (tonnes)</span>
+</th></tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Gipsy Danger 
+</th><td>United States
+</td><td>79
+</td><td>1980
+</td></tr>
+<tr>
+<th scope="row">Striker Eureka
+</th><td>Australia
+</td><td>76
+</td><td>1850
+</td></tr>
+<tr>
+<th scope="row">Crimson Typhoon
+</th><td>China
+</td><td>76
+</td><td>1722
+</td></tr>
+<tr>
+<th scope="row">Coyote Tango
+</th><td>Japan
+</td><td>86
+</td><td>2312
+</td></tr>
+<tr>
+<th scope="row">Cherno Alpha
+</th><td>Russia
+</td><td>85
+</td><td>2412
+</td></tr>
+</tbody>
+</table>
+       
+            </div>
         </div>
         
+
+        <div class="row">
+            <section id="History">
+      <h2>History</h2>
+      <h4>Van Gogh's unsold works</h4>
+      <p>Upon Vincent van Gogh's death in <a href="#">  1890</a>, his work not sold fell into the possession of his brother Theo. Theo died six months after Vincent, leaving the work in the possession of his widow, Johanna van Gogh-Bonger.[9] Selling many of Vincent's paintings with the ambition of spreading knowledge of his artwork, Johanna maintained a private collection of his works.</p>
+      <figure>
+        <div class="img-wrapper-contains-src">
+          <p class="fig-source">From wikipedia</p><img src="https://placehold.it/200x200.jpg" alt="Johanna van Gogh-Bonger (1925) by Isaac Israëls">
+        </div>
+        <figcaption>Johanna van Gogh-Bonger (1925) by Isaac Israëls</figcaption>
+      </figure>
+      <p>The collection was inherited by her son Vincent Willem van Gogh in 1925, eventually loaned to the Stedelijk Museum in Amsterdam where it was displayed for many years, and was transferred to the state-initiated Vincent van Gogh Foundation in 1962.[9]</p>
+      <h4>Dedicated museum</h4>
+      <p>Design for a Van Gogh Museum was commissioned by <a href="#">  the Dutch government</a> in 1963 to Dutch architect and furniture designer Gerrit Rietveld.[10] Rietveld died a year later, and the building was not completed until 1973,[11] when the museum opened its doors.[12]</p>
+      <p>In 1998 and 1999, the building was renovated by the Dutch architect Martien van Goor[13] and an exhibition wing by the Japanese modernist architect Kisho Kurokawa was added.[14]</p>
+      <p>Starting in late 2012, the museum was closed for renovations for six months. During this period, 75 works from the collection were shown in the <a href="#"> Hermitage Amsterdam</a>.[15]</p>
+      <p>On 9 September 2013, the museum unveiled a long-lost Van Gogh painting that spent years in a Norwegian attic believed to be by another painter. It is the first full-size canvas by him discovered since 1928. Sunset at Montmajour depicts trees, bushes and sky, painted with Van Gogh's familiar thick brush strokes. It can be dated to the exact day it was painted because he described it in a letter to his brother, Theo, and said he painted it the previous day 4 July 1888.[16]</p>
+      
+       </section>
+  
+
+
+        </div>
+        <div class="row">
+            <section id="History">
+      <h2>History</h2>
+      <h4>Van Gogh's unsold works</h4>
+      <p>Upon Vincent van Gogh's death in <a href="#">  1890</a>, his work not sold fell into the possession of his brother Theo. Theo died six months after Vincent, leaving the work in the possession of his widow, Johanna van Gogh-Bonger.[9] Selling many of Vincent's paintings with the ambition of spreading knowledge of his artwork, Johanna maintained a private collection of his works.</p>
+      <figure>
+        <div class="img-wrapper-contains-src">
+          <p class="fig-source">From wikipedia</p><img src="https://placehold.it/200x200.jpg" alt="Johanna van Gogh-Bonger (1925) by Isaac Israëls">
+        </div>
+        <figcaption>Johanna van Gogh-Bonger (1925) by Isaac Israëls</figcaption>
+      </figure>
+      <p>The collection was inherited by her son Vincent Willem van Gogh in 1925, eventually loaned to the Stedelijk Museum in Amsterdam where it was displayed for many years, and was transferred to the state-initiated Vincent van Gogh Foundation in 1962.[9]</p>
+      <h4>Dedicated museum</h4>
+      <p>Design for a Van Gogh Museum was commissioned by <a href="#">  the Dutch government</a> in 1963 to Dutch architect and furniture designer Gerrit Rietveld.[10] Rietveld died a year later, and the building was not completed until 1973,[11] when the museum opened its doors.[12]</p>
+      <p>In 1998 and 1999, the building was renovated by the Dutch architect Martien van Goor[13] and an exhibition wing by the Japanese modernist architect Kisho Kurokawa was added.[14]</p>
+      <p>Starting in late 2012, the museum was closed for renovations for six months. During this period, 75 works from the collection were shown in the <a href="#"> Hermitage Amsterdam</a>.[15]</p>
+      <p>On 9 September 2013, the museum unveiled a long-lost Van Gogh painting that spent years in a Norwegian attic believed to be by another painter. It is the first full-size canvas by him discovered since 1928. Sunset at Montmajour depicts trees, bushes and sky, painted with Van Gogh's familiar thick brush strokes. It can be dated to the exact day it was painted because he described it in a letter to his brother, Theo, and said he painted it the previous day 4 July 1888.[16]</p>
+      
+       </section>
+        </div>
+
         <div class="row">
             <div style="font-size: 10px">loganjwilson.com</div>
             <div class="col-4">loganjwilson.com</div>

@@ -37,8 +37,8 @@ body {
     box-sizing: border-box;
     /*padding: 10px 14px;*/
     font-size: 1.32em;
-    width: 100%;
-    max-width: 100vw;
+    /*width: 100%;*/
+    min-width: 100vw;
 }
 @media screen and (min-width: 750px){
     body{
@@ -47,8 +47,8 @@ body {
     box-sizing: border-box;
     padding: 0px 50px;
     font-size: 1.5rem;
-    width: 100%;
-    max-width: 100vw;
+    /*width: 100%;*/
+    min-width: 100vw;
     }
 }
 
@@ -2044,7 +2044,7 @@ nav ul li a {
   text-decoration: none;
 }
 nav ul li a:hover {
-  color: black;
+  color: white;
 }
 
 .container {
@@ -2153,7 +2153,7 @@ nav ul li a:hover {
 }
 
 figure {
-  width: 304px;
+  width: 275px;
     margin: 0;
     padding: 10px 14px;
     background: #0048AA;
@@ -2199,7 +2199,7 @@ figure figcaption {
   color: ghostwhite;
 }
 
-.page__header navbar {
+.page__header .navbar {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -2212,7 +2212,7 @@ figure figcaption {
   position: relative;
   z-index: 99;
 }
-.page__header navbar .brand .page__title {
+.page__header .navbar .brand .page__title {
   margin: 0;
   letter-spacing: -0.04em;
   font-size: 24px;
@@ -2221,7 +2221,7 @@ figure figcaption {
   position: relative;
   top: 2px;
 }
-.page__header navbar .brand .page__title small {
+.page__header .navbar .brand .page__title small {
   font-weight: 300;
   font-size: 12px;
   background: darkseagreen;
@@ -2232,20 +2232,20 @@ figure figcaption {
   position: relative;
   top: 12px;
 }
-.page__header navbar .navbar__drawer-toggle {
+.page__header .navbar .navbar__drawer-toggle {
   background: transparent;
   border: 0;
   padding: 1.3em 0;
   margin: 0;
   outline: 0;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines {
   margin-left: auto;
   direction: rtl;
   width: 35px;
   cursor: pointer;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span {
   display: block;
   width: 30px;
   height: 4px;
@@ -2254,28 +2254,28 @@ figure figcaption {
   -webkit-transition: all 600ms ease;
   transition: all 600ms ease;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:not(:last-child) {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:not(:last-child) {
   margin-bottom: .35rem;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1) {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1) {
   width: 14px;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1):after {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1):after {
   left: -19px;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2) {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2) {
   width: 8px;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2):after {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2):after {
   left: -13px;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3) {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3) {
   width: 22px;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3):after {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3):after {
   left: -27px;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:after {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines span:after {
   content: "";
   display: block;
   width: 4px;
@@ -2287,25 +2287,25 @@ figure figcaption {
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines:hover span {
   width: 30px;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(1):after {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(1):after {
   width: 16px;
   border-radius: 50px;
   left: 0px;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(2):after {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(2):after {
   width: 22px;
   border-radius: 50px;
   left: 0;
 }
-.page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(3):after {
+.page__header .navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(3):after {
   width: 8px;
   border-radius: 50px;
   left: 0;
 }
-.page__header navbar .navbar__drawer {
+.page__header .navbar .navbar__drawer {
   /* display: none; */
   position: absolute;
   width: 100%;
@@ -2313,14 +2313,14 @@ figure figcaption {
   background: white;
   left: 0;
 }
-.page__header navbar .navbar__drawer .navbar__menu {
+.page__header .navbar .navbar__drawer .navbar__menu {
   margin: 0;
   padding: 0;
   list-style: none;
   display: -webkit-box;
   display: flex;
 }
-.page__header navbar .navbar__drawer .navbar__menu li a {
+.page__header .navbar .navbar__drawer .navbar__menu li a {
   display: block;
   padding: 1.7em 2em 1.5em;
   color: inherit;
@@ -2331,7 +2331,7 @@ figure figcaption {
   box-sizing: border-box;
   font-size: 13.6px;
 }
-.page__header navbar .navbar__drawer .navbar__menu li a:hover {
+.page__header .navbar .navbar__drawer .navbar__menu li a:hover {
   background: rgba(0, 0, 0, 0.67);
   color: white;
 }
@@ -2799,17 +2799,18 @@ figure figcaption {
 #History p {
   text-align: left;
 }
-@media screen and (min-width: 500px){
+@media screen and (min-width: 501px){
     
   nav {
    background: rgba(0,0,0,0.68);
     font-size: 16px;
     height: 32px;
     padding: 20px 0 9px 0;
-    width: 100%;
+    width: 105%;
     min-width: 100vw;
     margin: auto;
     margin-left: -3.12em;
+    
     
 }
 }
@@ -2820,9 +2821,10 @@ figure figcaption {
     font-size: 16px;
     height: 32px;
     padding: 20px 0 9px 0;
-    width: 100%;
+    width: 105%;
     min-width: 100vw;
     margin: auto;
+    margin-left: auto;
     
 }
 
@@ -2837,6 +2839,102 @@ figure figcaption {
   max-width: 88vw;
 }
 
+}
+.ui-popup-table {
+  height: 67vh;
+}
+
+#popup-specs {
+  border-collapse: collapse;
+  /*margin: 3rem auto;*/
+  width: 88vw;
+}
+
+#popup-specs caption {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: Agency, sans-serif;
+}
+
+#popup-specs td,
+#popup-specs th {
+  text-align: center;
+  padding: 2rem;
+}
+
+#popup-specs th[scope] {
+  color: #fff;
+  background-color: #000;
+  font-weight: normal;
+}
+
+#popup-specs tbody {
+  border: 1px solid #222;
+}
+
+#popup-specs tbody th,
+#popup-specs tbody th + td {
+  text-align: left;
+  font-weight: normal;
+}
+
+#popup-specs tbody th {
+  font-size: 1.4rem;
+  border-right: 1px solid #222;
+  background-size: cover;
+  font-family: Agency, Arial, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+#popup-specs tbody tr:nth-child(1) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/gipsy-danger.jpg);
+}
+
+#popup-specs tbody tr:nth-child(2) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/striker-eureka.jpg);
+}
+
+#popup-specs tbody tr:nth-child(3) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/crimson-typhoon.jpg);
+}
+
+#popup-specs tbody tr:nth-child(4) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/coyote-tango.jpg);
+}
+
+#popup-specs tbody tr:nth-child(5) th {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cherno-alpha.jpg);
+}
+
+#popup-specs tbody tr:not(:last-child) {
+  border-bottom: 1px solid #222;
+}
+
+#popup-specs thead th[scope] {
+  border: 1px solid #222;
+  border-bottom: none;
+}
+
+#popup-specs tbody td:not(:last-child) {
+  border-right: 1px solid #222;
+}
+
+#popup-specs tbody td {
+  background-color: #377fd0;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23f2f2f2' fill-opacity='0.01' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  #popup-specs td,
+  #popup-specs th {
+    padding: .5rem;
+  }
+
+  #popup-specs th span {
+    display: none;
+  }
+}
 
 
 
@@ -3191,7 +3289,51 @@ figure figcaption {
         </div>
 
         <div class="row">
-            <div style="background-color: rgba(255,255,255,0.2);">all to my own</div>
+            <div class="ui-popup-table" style="background-color: rgba(255,255,255,0.2);">
+              <table id=popup-specs>
+<caption>popup Technical Specifications</caption>
+<thead>
+<tr>
+<th></th>
+<th scope=col>Country
+<th scope=col>Height<span> (meters)</span> 
+<th scope=col>Weight<span> (tonnes)</span>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope=row>Gipsy Danger 
+<td>United States
+<td>79
+<td>1980
+</tr>
+<tr>
+<th scope=row>Striker Eureka
+<td>Australia
+<td>76
+<td>1850
+</tr>
+<tr>
+<th scope=row>Crimson Typhoon
+<td>China
+<td>76
+<td>1722
+</tr>
+<tr>
+<th scope=row>Coyote Tango
+<td>Japan
+<td>86
+<td>2312
+</tr>
+<tr>
+<th scope=row>Cherno Alpha
+<td>Russia
+<td>85
+<td>2412
+</tr>
+</tbody>
+</table>
+            </div>
         </div>
         
         <div class="row">

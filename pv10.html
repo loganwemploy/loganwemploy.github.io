@@ -2010,9 +2010,6 @@ figure figcaption {
   text-align: left;
 }
 
-.mob-mn {
-  transform:translate3d(-15px,0,0);
-}
 
 @media screen and (max-width: 500px){
 .img-wrapper-contains-src {
@@ -2051,7 +2048,7 @@ figure {
   transform: scale(1.75)
 }
 .mob-mn {
-  transform:translate3d(-25px,0,0);
+  justify-content: flex-start;
 }
 
 }
@@ -2063,9 +2060,9 @@ figure {
     <div class="fluid-container">
         <div class="row">
             <div class="col-6" style="visibility: hidden;">Logo</div>
-            <div class="div" style="visibility: hidden;" >1</div>
-            <div class="div mob-mn">contact</div>
-            <div class="div col-3" > <div class="container">
+            <div class="div" style="visibility: hidden;display: none;" >1</div>
+            <div class="div mob-mn col-4" >contact</div>
+            <div class="div col-3" style="margin-left: -15%" > <div class="container">
  
 
     <ul class="navbar-right">

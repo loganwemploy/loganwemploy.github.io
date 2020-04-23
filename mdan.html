@@ -1,0 +1,681 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>stocklw</title>
+
+  <style type="text/css">
+
+/*
+1.Reset
+2.Nav
+3.Nav Links
+4.Hero (left & right)
+5.Features - list of features
+6. Overlay Section
+*/
+
+/*1.reset browser styles*/
+html,body { 
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+/*2.Nav*/
+
+/*nav bar top*/
+.topnav {
+	height: 6.75em;
+	width: 100%;
+	max-width: 100vw;
+	background-color: #fff;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	box-shadow:3px 2px 3px rgba(0,0,0,0.12);
+	
+}
+/*navbar logo*/
+.topnav > .logo {
+	height: auto;
+	width: 25%;
+	box-sizing: border-box;
+}
+.topnav > .logo > img {
+	width: 100%;
+	height: 100%;
+	transform: translate3d(0,0,0);
+
+}
+.topnav > .btn-cta {
+	height: auto;
+	width: 50%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-end;
+}
+.topnav > .btn-cta > button {
+	margin:1em 0 0 0;
+	width: 45%;
+	max-width: 16em;
+	border-radius: 16px;
+	border-radius: 3.125rem;
+	background-color: red;
+	color: white;
+	height: 3.4em;
+	font-size: 0.82em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all ease 120ms;
+}
+
+.topnav > .btn-cta > button:hover {
+	filter: invert(100%) contrast(100%);
+	color:white;
+	border: none;
+}
+
+.topnav > .nav-btn {
+	height: auto;
+	width: 25%;
+	box-sizing: border-box;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+
+
+}
+
+/*end topnav section*/
+/*3.Nav Links */
+.site-header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 3.125rem 1rem 0;
+}
+.site-header__logo {
+  margin: 0;
+  color: #222;
+}
+.site-header__actions {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+          align-items: center;
+  text-align: right;
+
+  position: absolute;
+  top: 75px;
+  z-index: 9;
+  right: 0;
+}
+.site-nav__item {
+  padding-right: 2rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: 700;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+.site-nav__item:hover,
+.site-nav__item.active {
+  color: #F00;
+}
+.site-nav__item:hover span:after,
+.site-nav__item.active span:after {
+  bottom: -0.5rem;
+  opacity: 1;
+}
+.site-nav__item span {
+  position: relative;
+}
+.site-nav__item span:after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6f6f6f;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+/*4.Hero*/
+
+/*Hero Section Start */
+.hero {
+	background-color: #efefef;
+	height: 75vh;
+	width: 100%;
+	max-width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr; /*mobile*/
+	text-align: center;
+	
+}
+
+/*4A. Leftside Hero */
+.hero .box1 > .box1content {
+	color: #667;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+	width: 88%;
+	margin:auto;
+	margin-top: 10%;
+}
+
+.box1content h1:nth-child(1) {
+	color: #333;
+	font-size: 4em;
+	font-weight: bold;
+}
+.box1content h1:nth-child(2) {
+	font-size: 2.5em;
+	margin-top: -1.25em;
+	font-weight: 200;
+	color: #444;
+}
+/*4B Rightside Hero*/
+
+.box2content {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+	margin-top: 10%;
+	max-width: 88vw;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+/*5.Features Section*/
+
+
+
+/*6.Overlay + Text*/
+
+.lower-landing {
+  padding: 25rem 0;
+  position: relative;
+  background: url("https://scontent.ford4-1.fna.fbcdn.net/v/t1.0-9/s960x960/93711438_10207272744252683_9179670151912488960_o.jpg?_nc_cat=104&_nc_sid=dd7718&_nc_ohc=Sh23UACMlw4AX9wv-qE&_nc_ht=scontent.ford4-1.fna&_nc_tp=7&oh=dd8c90e11c099ac155dbcc4328355259&oe=5EC7ABF2") no-repeat center center/cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+  /* woman smiling situps https://images.pexels.com/photos/3757375/pexels-photo-3757375.jpeg?auto=compress&cs=tinysrgb&h=650&w=940*/
+}
+.lower-landing__heading {
+  margin-bottom: 3rem;
+  font-size: 2.25rem;
+  margin-left: 0.75em;
+}
+.lower-landing__copy {
+  margin-bottom: 2rem;
+  padding: 0 3rem 0 1.75rem;
+  font-size: 0.875rem;
+  line-height: 1.9;
+  border-left: 1px solid #fff;
+}
+.lower-landing .overlay {
+  padding-top: 20rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.7)));
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+.lower-landing .overlay .container {
+  display: -webkit-box;
+  display: flex;
+}
+.lower-landing .overlay__content {
+  margin-left: auto;
+  max-width: 31.25rem;
+}
+.lower-landing__cta a {
+	text-decoration: none;
+	color: #f90;
+	font-weight: bold;
+	margin-left: 3em;
+}
+
+
+
+@media screen and (min-width: 600px) {
+	.hero {
+	grid-template-columns: 45vw 1fr; /*full width*/
+}
+.box2content {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+	margin-top: 10%;
+	max-width: 600px;
+	max-height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.topnav > .logo > img {
+	width: 100%;
+	height: 100%;
+	transform: translate3d(36px,0,0);
+
+}
+.site-header__actions {
+	position: absolute;
+	top: 65px;
+	z-index: 9;
+	right: 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+}
+
+.btn-skinny {
+  padding: 0.5em 1em;
+  font-size: 0.75em;
+  line-height: normal;
+}
+.btn-skinny.full {
+  width: 100%;
+}
+
+.btn-large {
+  padding: 0.75em 2em;
+  font-size: 1em;
+  line-height: normal;
+}
+.btn-large.full {
+  width: 100%;
+}
+
+.btn-block, input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+  display: block;
+  width: 100%;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+button, .btn {
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.btn:last-child,
+input.btn {
+  margin-right: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Catamaran', sans-serif;
+  line-height: 1;
+}
+
+header, footer {
+  width: 100%;
+  display: block;
+  height: 100px;
+  background: #f6f6f6;
+  margin-bottom: 5rem;
+}
+
+footer {
+  margin: 5rem 0 0;
+}
+
+main {
+  max-height: 67vh;
+  width: 95%;
+  margin: 44vh auto;
+}
+@media (min-width: 600px) {
+  main {
+  	max-height: 67vh;
+  	margin-top: 12vh;
+    width: 85%;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+ul li {
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 97.9166666667%;
+  margin: 0 1.0416666667%;
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  padding: 3rem 0;
+  -webkit-box-align: end;
+          align-items: flex-end;
+}
+@media (min-width: 400px) {
+  ul li {
+    display: inline;
+    float: left;
+    width: 47.9166666667%;
+    margin: 0 1.0416666667%;
+    padding: 5rem 0;
+  }
+}
+@media (min-width: 600px) {
+  ul li {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.0416666667%;
+    display: -webkit-box;
+    display: flex;
+    padding: 3rem 0;
+  }
+}
+ul li .portrait {
+  pointer-events: none;
+  position: absolute;
+  width: 75%;
+  top: 50%;
+  left: 3rem;
+  -webkit-transform: translateY(-55%) scale(0.95);
+          transform: translateY(-55%) scale(0.95);
+  opacity: 0;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  max-width: 300px;
+}
+
+@media (min-width: 800px) {
+  ul li .portrait {
+    width: 35%;
+  }
+}
+ul h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  margin-top: 0;
+  margin-bottom: -9px;
+}
+@media (min-width: 400px) {
+  ul h2 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 800px) {
+  ul h2 {
+    font-size: 3rem;
+  }
+}
+ul .name {
+  position: relative;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+ul .name:after {
+  content: "";
+  border-bottom: 3px solid #4e9398;
+  box-shadow: inset 0 -1px 0 #4e9398;
+  -webkit-transition: box-shadow 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: box-shadow 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+  display: inline-block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  display: block;
+  width: 100%;
+  min-height: 2rem;
+  z-index: -1;
+}
+ul .name:hover:after, ul .name:focus:after, ul .name:active:after {
+  box-shadow: inset 0 -9px 0 #4e9398;
+  border-bottom: 3px solid #4e9398;
+}
+ul a,
+ul a:visited,
+ul a:hover,
+ul a:focus,
+ul a:active {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+.intro {
+  position: relative;
+  height: auto;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  background-image: linear-gradient(35deg, #8DD9FF, #FFDA00);
+  min-width: 100vw;margin: 32vh 0 0 0;padding: 0;
+}
+.intro img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+.intro .caption {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  color: white;
+}
+.intro .caption h1 {
+  display: inline-block;
+  width: 70%;
+  font-size: 6vw;
+  font-weight: 100;
+}
+
+.intro .overlay {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.intro .overlay svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  ul li .portrait {
+    width: 50%;
+  }
+   .intro {
+  	margin: 0;
+  } 
+
+}
+
+  </style>
+</head>
+<body>
+<!-- 2.Nav -->
+
+	<div class="topnav">
+		<div class="logo">
+			<img style="height: 20px;width: 140px;margin:20px auto;padding: 5px 7px 5px 7px;" src="https://sworkit.com/wp-content/uploads/2019/04/logo.png" alt="">
+		</div>
+		<div class="btn-cta">
+			<button>Try For Free</button>
+		</div>
+		<div class="nav-btn">
+			<!-- <button>Nav</button> -->
+		</div>
+	</div> <!--/.topnav  end-->
+
+ <section class="site-header__actions">
+      <nav class="site-nav">
+        <a href="#0" class="site-nav__item"><span>Products</span></a>
+        <a href="#0" class="site-nav__item"><span>Offers</span></a>
+        <a href="#0" class="site-nav__item"><span>Services</span></a>
+      </nav>
+   
+      <!--/__search-->
+     
+<!-- /__cart -->
+    </section>
+<!-- 3.Hero -->
+	<section class="hero">
+		<div class="box1">
+			<div class="box1content">
+				<h1>Fitness</h1>
+				<h1>Made Simple</h1>
+				<h3>The best personal trainer app to help you get (and stay) in the best shape of your life</h3>
+
+
+			</div>
+		</div>
+		<div class="box2">
+			<div class="box2content"><img style="height: 360px" src="https://placehold.it/200x200.jpg" alt=""></div>
+			
+		</div>
+	</section><!--/ end Hero-->
+	<figure class="intro">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/diver2.jpg" alt="" />
+  <figcaption class="caption">
+    <h1>Invasion</h1>
+  </figcaption>
+  <span class="overlay">
+<svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+<path fill="#FFFFFF" d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z"
+	/>
+</svg>
+  </span>
+</figure>
+	<main>
+	<ul class="leadership-grid">
+		<li>
+			<h2>Board of Directors</h2>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Tortor Ipsume</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Justo Parturient</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Elit Fringilla</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Tortor Mollis</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Ligula Euismod Condimentum</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Nullam Ornare</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Malesuada Lorem</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Justo Euismod</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Dolor Condimentum</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="name">Tristique Purus</span>
+			</a>
+		</li>
+	</ul>
+
+	
+</main>
+<!-- 4.Features -->
+	<section class="features">
+		
+	</section>
+	 <section class="lower-landing" style="display: block;margin-top: 67vh;">
+    <div class="overlay">
+      <div class="container">
+        <div class="overlay__content">
+          <h2 class="lower-landing__heading">Take control of<br> your health</h2>
+          <div class="lower-landing__copy">
+            Braun clocks have been designed to enchance their
+            individual uses through a combination of features
+            and functions. The Braun watch collection has been
+            created as a true representation of quality.
+          </div>
+          <div class="lower-landing__cta">
+            <a href="#0" class="button--white">Explore Options</a>
+          </div>
+        </div>
+        <!-- /.overlay-content -->
+      </div>
+    </div>
+    <!-- /.overlay -->
+  </section>
+
+
+</body>
+</html>

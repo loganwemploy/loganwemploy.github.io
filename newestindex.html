@@ -1074,7 +1074,7 @@ mark {
                  var number = 0;
              function changeColorHeader() {
                const changer = document.getElementById('changer');
-              let Played = {colors:['magenta','skyblue','goldenrod'],words:['React JS engineer','UX/UI Enthusiast','Front-end engineer']}
+              let Played = {colors:['magenta','skyblue','goldenrod'],words:['React JS engineer','UX/UI Enthusiast','Front-end engineer','UX/UI Enthusiast']}
 
               changer.innerText =   Played.words[`${number}`]
               changer.style.color =  Played.colors[`${number}`];
@@ -1082,10 +1082,10 @@ mark {
 function numberChange(){
   console.log(number);
   // console.log(`${Played.colors.length}`);
-  if(number <  3){
+  if(number <  4){
   number = number + 1
 }
-if (number >= 3) {
+if (number >= 4) {
   number = 0;
 }
   // console.log(number);
@@ -1096,9 +1096,27 @@ function rocker () {
 numberChange();
 }
 
+// let magicr = setInterval(rocker,100);
 
-setInterval(rocker,2400);
+function magicUpdater(){let magicr = setInterval(rocker,1900);
 
+function update1Interval(magicr){
+	clearInterval(magicr);
+	setInterval(rocker,18000);
+}
+function update2Interval(magicr){
+	clearInterval(magicr);
+	setInterval(rocker,7200);
+}
+function update3Interval(magicr){
+	clearInterval(magicr);
+	setInterval(rocker,18000);
+}
+// setTimeout(update1Interval,1000);
+// setTimeout(update2Interval,8000);
+// setTimeout(update3Interval,15000);
+}
+setInterval(magicUpdater,2000);
 // changer.addEventListener('click',changeColorHeader);
 // changer.addEventListener('click',numberChange);
             </script>

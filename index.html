@@ -476,7 +476,7 @@ mark {
   -webkit-box-align: center;
           align-items: center;
   position: relative;
-  padding-top: 75%;
+  padding-top: 23%;
   background-color: #fefefe;
 }
 .skills .title {
@@ -718,11 +718,17 @@ mark {
 
 .image-gallery-items {
   display: flex;
-  margin: auto 0px;
+  margin: auto 0 0 -1.33em ;
   flex-wrap: wrap;
+  padding-left: 0.33em;
   overflow: auto;
   clear: both;
   overflow: scroll;
+  background-color: rgba(245,245,245,0.12);
+  max-width: 85vw;
+  justify-content: space-around;
+
+
 }
 
 .image-gallery-items:after {
@@ -740,6 +746,11 @@ mark {
   display: block;
   overflow: hidden;
 }
+.image-gallery-item .thumbnail:nth-child(odd):after {
+   content: "Online Ordering System";
+   font-size: 0.68em;
+};
+
 
 .image-gallery-item img {
   width: 190px;
@@ -975,13 +986,6 @@ mark {
         </section>
     </main>
     
-
-
-
-
-
-
-
 
 
 <div class="process">

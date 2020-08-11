@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Java Documentation Page</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html, body {
+    background-color: #003050;
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.padding{
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+.title {
+  color: goldenrod;
+  font-family: 'Muli', sans-serif;
+}
+#navbar{
+    min-width: 300px;
+    width: 330px;
+    position: fixed;
+}
+header{
+    font-size: 2.2em;
+    font-weight: 500;
+}
+hr{
+    padding-bottom: .5em;
+}
+.imp_title {
+  text-decoration: underline;
+}
+
+#navbar .title{
+    text-align: left;
+    margin-left: 0.85em;
+    font-size: 3.5em;
+    padding-top: 25%;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-family: 'Muli', sans-serif;
+
+}
+#navbar i{
+    color: #d3c5c4;
+    font-size: 1.3em;
+    margin-right: .09em; 
+}
+#navbar li{
+    margin: 0 13%;
+    font-size: 1.1em;
+}
+.nav-link{
+    color: white;
+    font-weight: 400;
+}
+.nav-link:hover{
+    color: white;
+}
+
+.nav-item {
+  font-family: 'Muli', sans-serif;
+}
+
+#main-doc{
+    padding: 2.5em 3em 3em;
+    background-color: white;
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+.main-section{
+    margin-bottom: 2.5em;
+}
+.main-section article{
+    color: #4d4e53;
+    line-height: 1.6;
+}
+.main-section li{
+    margin-left: 1.6em;
+    margin-top: 1.5em;
+}
+code{
+    display:block;
+    text-align: left;
+    white-space: pre;
+    line-height: 2;
+    background-color: #035;
+    padding:15px;
+    margin:10px;
+    color: #d8c456;
+    border-radius:5px;
+}
+@media only screen and (max-width: 1680px){
+    #main-doc{
+        margin-left: 10%;
+    }
+}
+@media only screen and (max-width: 575px){
+    #main-doc{
+        margin: 0 5%;
+    }
+    #navbar{
+        width: 100%;
+        position: relative;
+    }
+    .navbar-movil{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5% 5% 3% 5%;
+    }
+    .navbar-toggler {
+        color: #454549;
+        border-color: #9393953b; 
+    }
+    .navbar-toggler-icon {
+        padding: 1px 4px;
+        font-weight: 300;
+    }
+    #navbar .title{
+        font-size: 2.5em;
+        padding-top: 0%;
+        padding-left: 2%; 
+    }
+    #navbar li{
+        margin: 0 13%;
+    }
+    #navbar i{
+        margin-right: .15em; 
+        color: #f8c149d7;
+    }
+}
+
+img { max-width: 62vw;
+padding: 40px 70px 0 0; }
+
+</style>
+</head>
+
+<body>
+  <div class="page-wrap">
+    <div class="row">
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
+        <nav id="navbar" class="navbar-movil navbar-expand-sm">
+          <header class="title"><!-- <i class="fab fa-javascript"></i> -->Svelte + Meteor</header>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMini" aria-controls="navMini" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                        </button>
+
+          <div class="collapse navbar-collapse" id="navMini">
+            <ul class="nav flex-column mt-4">
+              <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+              <li class="nav-item"><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Javascript_and_Java">JavaScript and Java</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Hello_world">Hello world</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Variables">Variables</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+            </ul>
+          </div>
+        </nav>
+        <section class="footer-wrap">
+
+        </section>
+      </div>
+      <div class="col-xl-10 col-lg-9 col-md-8 col-sm-7">
+        <main id="main-doc">
+           <h6 style="color: #999">Friday, August 7th, 2020</h6>
+          <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <hr>
+            <article>
+              <h2 class="imp_title">Getting Installed</h2>
+              <p>Intall Meteor if not already installed... after meteor is installed via command line from a curl command on their website</p>
+              <code>
+             $ meteor create ~/my_project_name
+             $ cd ~/my_project_name
+             $ meteor
+    </code>
+              <p>Next - go to your server > main.js and remove all blaze related templating . erase entire file and replace with </p>
+              <code>
+                import { Meteor } from 'meteor/meteor';
+
+Meteor.startup(() => {
+
+});
+
+
+              </code>
+           <li>
+            install svelte for the front end with the "meteor npm install"
+            <code>$ meteor npm install --save svelte</code>
+              </li>
+              <li>
+                add a couple packages to the project
+                <code>$ meteor add svelte:compiler rdb:svelte-meteor-data static-html</code>
+              </li>
+              <li>
+                It must will look something like this.
+                <img src="https://dl3.pushbulletusercontent.com/ptRc863olxemgppKQPhxQ1uFa0JKPPtx/image.png" alt="screenshot of terminal commands">
+              </li>
+              <li>
+               go to your ".meteor" folder directory and find 
+               "packages". Go ahead and delete anything blaze related. specifically "blaze-html-templates" - remove this from the file completely.
+               <img src="https://dl3.pushbulletusercontent.com/sPnJ7CGCayWS3DxnBMxecxhKlZnWWk4L/image.png" alt="screenshot of packages from meteor>packages file.">
+
+               also add a new folder to your project named "imports". We will be using this to direct to our Svelte App Component
+              <li>
+               Edit your "src > main.html" to direct your html to js just like any app . react or other. 
+               <code>
+                 head
+                  title project meteor svelte /title
+                 /head
+                 body
+                   div id="app" /div
+
+                 body
+               </code>
+
+                <p>Next - go to your client > main.js and  replace with </p>
+              <code>
+               import { Meteor } from 'meteor/meteor';
+import { App } from '../imports/ui/App.svelte';
+
+Meteor.startup(() => {
+  new App({
+    target: document.getElementById('app'),
+  });
+});
+
+
+              </code>
+              </li>
+              
+              
+            </article>
+          </section>
+          <section class="main-section" id="What_you_should_already_know">
+            <header>
+              <h2 class="imp_title">
+                Adding Reactivity with Meteor/Mongo
+              </h2>
+            </header>
+            <hr>
+            <p>This section is largely in setting up a mongo collection and using useTracker to make it reactive.</p>
+            <li>-Create a new folder inside "imports" named "api" inside will be where js files will do mongo and collections are</li>
+            <li>Inside the newly created imports > api folder. lets create a file called whatever you want your mongo collection called. because that happens in this file.
+              <code>import { Mongo } from 'meteor/mongo'
+
+export const ContactForm = new Mongo.Collection("contactform")</code></li>
+            <li>Inside App.svelte add a script tag and insert the lines
+<code> import { useTracker } from "meteor/rdb:svelte-meteor-data";
+
+
+  $: contactforms = useTracker(() => ContactForm.find({}).fetch());
+  </code>
+  <p>$: your_variable_name  implies a <b>REACTIVE VARIABLE</b> in meteor. UseTracker works in tandem with $: to make  synced and live reactivity.</p>
+<code>
+$: your_variable_name </code> 
+            </li>
+            <li>
+              Create now ##Routing with "Page js"
+              <p>in App.svelte insert code -</p>
+              <code>meteor npm install --save page</code>
+              <code>
+                    import router from "page";
+
+
+    import Home from "./pages/Home.svelte";
+
+    let page;
+  let params;
+  let bloggedIn = false;
+
+  router("/home", () => (page = Home));
+  router("/blog", () => (page = Blog));
+
+  router(
+    "/blog/:id",
+
+    // Before we set the component
+    (ctx, next) => {
+      params = ctx.params;
+      next();
+    },
+
+    // Finally set the component
+    () => (page = SingleBlog)
+  );
+  // Set up the router to start and actively watch for changes
+  router.start();
+
+            </code>
+          </li>
+          <li>this is to iterate over an object </li>
+           <code> {#each $sellproducts as sellproduct}
+           {sellproduct.title}
+         {/each}</code>
+          <li>this is  the component to render pages 
+           
+            <code>
+main
+    svelte:component this={page} {params} 
+  main 
+</code></li>
+          </section>
+          <section class="main-section" id="Javascript_and_Java">
+            <header>Making new pages to route to</header>
+            <hr>
+            <p>Svelte routing systems I like start and end with "page.js" so far. first one I have gotten to work immediately so I am sticking with it</p>
+            <p>Make sure to make a pages folder in your ui folder.. define the routes and componets in app.svelte as normal.</p>
+            <code>
+  import router from "page";
+
+  import Home from "./pages/Home.svelte";
+  import Blog from "./pages/Blog.svelte";
+
+  let page;
+  let params;
+  let bloggedIn = false;
+
+  router("/", () => (page = Home));
+  router("/blog", () => (page = Blog));
+
+  router(
+    "/blog/:id",
+
+    // Before we set the component
+    (ctx, next) => {
+      params = ctx.params;
+      next();
+    },
+
+    // Finally set the component
+    () => (page = SingleBlog)
+  );
+  // Set up the router to start and actively watch for changes
+  router.start();
+
+  //   import { useTracker } from "meteor/rdb:svelte-meteor-data";
+  //   import { SellProducts } from "../api/sellProducts";
+
+  //   $: sellproducts = useTracker(() => SellProducts.find({}).fetch());
+</code>
+          </section>
+          <section class="main-section" id="Hello_world">
+            <header>API Calls in Svelte</header>
+            <hr>
+            <p>The traditional React program has component lifecycle . this too uses that:</p>
+            <code>
+              -script-
+  import { onMount } from "svelte";
+
+  const apiUrl = "https://caniganintl.com/wp-json/wp/v2/blog_posts";
+  let data = [];
+
+  onMount(async () => {
+    const response = await fetch(apiUrl);
+    data = await response.json();
+  });
+-/script-
+
+-h1-Blogs-/h1-
+-nav-
+  -a
+    href="/"
+    on:click={() => {
+      bloggedIn = false;
+    }}>
+    blogs
+  -/a>
+-/nav>
+{#each data as item}
+  -div>
+    -h5>
+      -a href="/blog/{item.acf.blog_img.id}">{item.acf.blog_title}-/a>
+      {item.acf.blog_category}
+    -/h5>
+    -h1>{item.acf.blog_title}-/h1>
+    -h6>{item.acf.blog_category}-/h6>
+    -p>{item.acf.blog_desc}-/p>
+    -img src={item.acf.blog_img.url} alt="wordpress impoirted" />
+  -/div>
+{/each}
+
+
+            </code>
+          </section>
+        <!--   <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <hr>
+            <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+            <p>A Java identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because Java is case sensitive, letters include the characters "A" through "Z" (uppercase) and the
+              characters "a" through "z" (lowercase).</p>
+            <code>var num = 10; var name = "Diana" ; let _width = 200.4 </code>
+            <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+          </section>
+          <section class="main-section" id="Declaring_variables">
+            <header>Declaring variables</header>
+            <hr>
+          
+            <p>To declare and assign a number use the following syntax:</p>
+            <code>int myNumber = 5;</code>
+      
+            <p>Or you can combine them:</p>
+            <code>int myNumber;
+myNumber = 5;</code>
+            <p>To define a double floating point number, use the following syntax:</p>
+            <code>double d = 4.5;
+d = 3.0;</code>
+          </section> -->
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

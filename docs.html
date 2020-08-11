@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Java Documentation Page</title>
+  <title>Javascript Documentation Page</title>
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -168,11 +168,11 @@ padding: 40px 70px 0 0; }
           <div class="collapse navbar-collapse" id="navMini">
             <ul class="nav flex-column mt-4">
               <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
-              <li class="nav-item"><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
-              <li class="nav-item"><a class="nav-link" href="#Javascript_and_Java">JavaScript and Java</a></li>
-              <li class="nav-item"><a class="nav-link" href="#Hello_world">Hello world</a></li>
-              <li class="nav-item"><a class="nav-link" href="#Variables">Variables</a></li>
-              <li class="nav-item"><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+              <li class="nav-item"><a class="nav-link" href="#npm">NPM Installation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#reactivity">Reactivity</a></li>
+              <li class="nav-item"><a class="nav-link" href="#routing">Routing</a></li>
+              <li class="nav-item"><a class="nav-link" href="#api">API</a></li>
+              <li class="nav-item"><a class="nav-link" href="#onmount">onMount</a></li>
             </ul>
           </div>
         </nav>
@@ -206,7 +206,7 @@ Meteor.startup(() => {
               </code>
            <li>
             install svelte for the front end with the "meteor npm install"
-            <code>$ meteor npm install --save svelte</code>
+            <code id='#npm'>$ meteor npm install --save svelte</code>
               </li>
               <li>
                 add a couple packages to the project
@@ -252,7 +252,7 @@ Meteor.startup(() => {
               
             </article>
           </section>
-          <section class="main-section" id="What_you_should_already_know">
+          <section class="main-section" id="reactivity">
             <header>
               <h2 class="imp_title">
                 Adding Reactivity with Meteor/Mongo
@@ -275,7 +275,7 @@ export const ContactForm = new Mongo.Collection("contactform")</code></li>
 <code>
 $: your_variable_name </code> 
             </li>
-            <li>
+            <li id="#routing">
               Create now ##Routing with "Page js"
               <p>in App.svelte insert code -</p>
               <code>meteor npm install --save page</code>
@@ -360,11 +360,11 @@ main
   //   $: sellproducts = useTracker(() => SellProducts.find({}).fetch());
 </code>
           </section>
-          <section class="main-section" id="Hello_world">
+          <section class="main-section" id="api">
             <header>API Calls in Svelte</header>
             <hr>
-            <p>The traditional React program has component lifecycle . this too uses that:</p>
-            <code>
+            <p>The traditional React program has component lifecycle - this too uses that:</p>
+            <code id="onmount">
               -script-
   import { onMount } from "svelte";
 

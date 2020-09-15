@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Logan Color Maker</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="logan color picker" />
+    <meta name="keywords" content="keywords,here" />
+    <style>
+      html {
+  margin: 0;
+}
+body {
+  margin: 0;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  height: 100vh;
+}
+
+.bg {
+  position: absolute;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 800px;
+
+}
+
+.box {
+  position: relative;
+  width: 540px;
+  height: 450px;
+  border: 1px solid rgb(212, 196, 196);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin-top: 20px;
+  background-color: white;
+  margin: 30px;
+  border-radius:2.3em 0 0 2.3em;
+}
+
+
+.text {
+  grid-column: span 1;
+  grid-row: span 3;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+.text h1 {
+  font-size: 42px;
+  line-height: 0.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.text p {
+  line-height: 1.2;
+  padding-bottom: 1rem;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.button {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 2px;
+  background: #cd5454;
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
+.colors {
+  margin-left: 8px;
+  width: 380px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.line {
+  height: 6px;
+  width: 420px;
+  background-image: linear-gradient(
+    to right,
+    #cd5454 0%,
+    #cd5454 33%,
+    #f1b9b9 33%,
+    #f1b9b9 66%,
+    #fadfdf 66%,
+    #fadfdf 100%
+  );
+  margin: -12px 12px;
+}
+
+.rectangle {
+  border-radius: 10px;
+  height: 50px;
+  width: 100px;
+  background-color: #555;
+  margin: 10px;
+  box-shadow: 3px 3px 5px grey;
+}
+
+.red {
+  background-color: #cd5454;
+}
+.orange {
+  background-color: #f68e65;
+}
+.blue {
+  background-color: #494ca2;
+}
+.yellow {
+  background-color: #ffed61;
+}
+.green {
+  background-color: #488b8f;
+}
+.purple {
+  background-color: #714288;
+}
+.pink {
+  background-color: #f67280;
+}
+
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    width: 375px;
+  }
+  .box {
+    width: 374px;
+    height: 199.8px;
+   
+  }
+  .bg {
+    width: 345px;
+    height: 200px;
+  }
+  .colors {
+    width: 375px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+  }
+  .line {
+    max-width: 308px;
+    margin-bottom: 10px;
+    height: 4px;
+  }
+  .yes {
+    display: none;
+  }
+  .yellow {
+    display: none;
+  }
+
+  .text {
+    grid-column: span 1;
+    grid-row: span 1;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  .text h1 {
+    font-size: 28px;
+    line-height: 0.5;
+  }
+  .text p {
+    font-size: 10px;
+    padding-bottom: 5px;
+  }
+  
+  .button {
+    padding: 4px 12px;
+    border: none;
+    border-radius: 2px;
+    background: #cd5454;
+    font-size: 9px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .rectangle {
+    border-radius: 6px;
+    height: 36px;
+    width: 86px;
+    margin: 6px;
+    box-shadow: 3px 3px 5px grey;
+  }
+}
+
+#h2-hero {
+  color: #000;
+  min-height:70px;
+  padding: 10px 10px 20px 12px;
+  border-radius: 0.68em;
+  line-height:1.2;
+}
+
+
+
+@media screen and (min-width: 850px){
+  .colors {position:fixed;
+    top:0;
+    left:0;
+    border: 2px dashed black;
+    border-radius:1.2em;
+    padding: 5px 7px 5px 7px;
+    transform:scale(0.7);
+    
+}
+    </style>
+    <body>
+
+  <div class="wrapper">
+
+    <div class="box">
+      <div class="text">
+       
+        <h1 id='h2-hero'>Logan Color Pick</h1>
+        <p>Pick a color.</p>
+        <button type="submit" class="button" value="send">CONTACT</button>
+      </div>
+
+      <svg class="bg" width="540" height="384" viewBox="0 0 540 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+            <path class="lgt" d="M539.812 -2.25L812.773 470.531H266.852L539.812 -2.25Z" fill="#FADFDF"/>
+            <path class="mdt" d="M543 36.75L795.013 473.25H290.987L543 36.75Z" fill="#F1B9B9"/>
+            <path class="smt" d="M540 87.75L735.18 425.812H344.82L540 87.75Z" fill="#CD5454"/>
+            </g>
+            <defs>
+            <clipPath id="clip0">
+            <rect width="540" height="384" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+    </div>
+
+ 
+    <div class="colors">
+      <div class="rectangle red"></div>
+      <div class="rectangle orange"></div>
+      <div class="rectangle green"></div>
+      <div class="rectangle blue"></div>
+      <div class="rectangle purple"></div>
+      <div class="rectangle pink"></div>
+    </div>
+
+  </div>
+ <script type="text/javascript">const dataSet = {
+  domstrings: function() {
+    const d = document;
+    const sm = d.querySelector(".smt");
+    const md = d.querySelector(".mdt");
+    const lg = d.querySelector(".lgt");
+    const button = d.querySelector(".button");
+    const heroH2 = d.querySelector("#h2-hero");
+    
+    const line = d.querySelector(".line");
+    const strings = [sm, md, lg, button,heroH2, line];
+    return strings;
+  },
+  blue: function() {
+    const drkBlue = "#494ca2";
+    const mdBlue = "#8186d5";
+    const ltBlue = "#c6cbef";
+    const line = `linear-gradient(to right, ${drkBlue} 0%,${drkBlue} 33%,${mdBlue} 33%,${mdBlue} 66%,${ltBlue} 66%, ${ltBlue} 100%)`;
+    const blue = [drkBlue, mdBlue, ltBlue, line];
+    return blue;
+  },
+  red: function() {
+    const drkRed = "#CD5454";
+    const mdRed = "#F1B9B9";
+    const ltRed = "#FADFDF";
+    const line = `linear-gradient(to right, ${drkRed} 0%,${drkRed} 33%,${mdRed} 33%,${mdRed} 66%,${ltRed} 66%, ${ltRed} 100%)`;
+    const red = [drkRed, mdRed, ltRed, line];
+    return red;
+  },
+  orange: function() {
+    const drkOrange = "#f68e65";
+    const mdOrange = "#fabda5";
+    const ltOrange = "#fcd4c5";
+    const line = `linear-gradient(to right, ${drkOrange} 0%,${drkOrange} 33%,${mdOrange} 33%,${mdOrange} 66%,${ltOrange} 66%, ${ltOrange} 100%)`;
+    const orange = [drkOrange, mdOrange, ltOrange, line];
+    return orange;
+  },
+  yellow: function() {
+    const drkYellow = "#ffed61";
+    const mdYellow = "#fff5a5";
+    const ltYellow = "#fffbd8";
+    const line = `linear-gradient(to right, ${drkYellow} 0%,${drkYellow} 33%,${mdYellow} 33%,${mdYellow} 66%,${ltYellow} 66%, ${ltYellow} 100%)`;
+    const yellow = [drkYellow, mdYellow, ltYellow, line];
+    return yellow;
+  },
+  green: function() {
+    const drkGreen = "#488b8f";
+    const mdGreen = "#5ea3a3";
+    const ltGreen = "#add2c9";
+    const line = `linear-gradient(to right, ${drkGreen} 0%,${drkGreen} 33%,${mdGreen} 33%,${mdGreen} 66%,${ltGreen} 66%, ${ltGreen} 100%)`;
+    const green = [drkGreen, mdGreen, ltGreen, line];
+    return green;
+  },
+  purple: function() {
+    const drkPurple = "#714288";
+    const mdPurple = "#9873b9";
+    const ltPurple = "#caabd8";
+    const line = `linear-gradient(to right, ${drkPurple} 0%,${drkPurple} 33%,${mdPurple} 33%,${mdPurple} 66%,${ltPurple} 66%, ${ltPurple} 100%)`;
+    const purple = [drkPurple, mdPurple, ltPurple, line];
+    return purple;
+  },
+  pink: function() {
+    const drkPink = "#f67280";
+    const mdPink = "#f9a2ab";
+    const ltPink = "#fde2e5";
+    const line = `linear-gradient(to right, ${drkPink} 0%,${drkPink} 33%,${mdPink} 33%,${mdPink} 66%,${ltPink} 66%, ${ltPink} 100%)`;
+    const pink = [drkPink, mdPink, ltPink, line];
+    return pink;
+  }
+};
+
+const boxes = document.querySelectorAll(".rectangle");
+for (const i of boxes) {
+  const shape = dataSet.domstrings();
+  const changeColor = function(color) {
+    shape[0].style.fill = color[0];
+    shape[1].style.fill = color[1];
+    shape[2].style.fill = color[2];
+    for (let i = 3; i < shape.length - 1; i++) {
+      shape[i].style.background = color[0];
+    }
+    shape[7].style.backgroundImage = color[3];
+  };
+
+  i.addEventListener("click", function() {
+    if (i.classList.contains("red")) {
+      changeColor(dataSet.red());
+    }
+    if (i.classList.contains("orange")) {
+      changeColor(dataSet.orange());
+    }
+    if (i.classList.contains("blue")) {
+      changeColor(dataSet.blue());
+    }
+    if (i.classList.contains("yellow")) {
+      changeColor(dataSet.yellow());
+    }
+    if (i.classList.contains("green")) {
+      changeColor(dataSet.green());
+    }
+    if (i.classList.contains("purple")) {
+      changeColor(dataSet.purple());
+    }
+    if (i.classList.contains("pink")) {
+      changeColor(dataSet.pink());
+    }
+  });
+}
+</script>
+  </body>
+</html>

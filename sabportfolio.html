@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+	<title>Document</title>
+	<style>
+		html,body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.all{
+			max-width: 100vw;
+			width: 100%;
+			min-height: 100vh;
+			height: 100%;
+			background-color: #eee;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23d4d4d4' fill-opacity='0.07'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
+		}
+		header {
+			width: 100%;
+			position: relative;
+			background-color: #eee;
+			display: flex;
+			flex-wrap: nowrap;
+		}
+		.logo{
+			min-height: 90px;
+			min-width: 25vw;
+			background: #eee;
+
+		}
+		.logo > img {
+padding: 10px 14px 10px 14px;
+		}
+		.links {
+			margin: auto 0 auto 32px;
+		    color: black;
+			width: 100%;
+			position: relative;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			max-width: 25vw;
+
+		}
+		
+		.links a {
+			text-decoration: none;
+			color: #222;
+			font-size: 1.02em;
+			font-family: 'Inter', sans-serif;
+		
+
+		}
+		.links a:hover {
+			text-decoration: underline;
+		}
+		main {
+			padding-top: 5em;
+			width: 100%;
+			max-width: 100vw;
+			/*background-color: goldenrod;*/
+			display: grid;
+			grid-template-columns: 33.3333% 1fr 1fr;
+			justify-items: center;
+		}
+		.grid-item {
+			padding: 0;
+			background-color: #09f;
+			max-height: 300px;
+			height: 300px;
+			width: 32vw;
+			background-image: url('https://scontent.ford4-1.fna.fbcdn.net/v/t1.15752-9/119891170_353390459118812_481392990831881604_n.jpg?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=_f6AZcYxDZAAX-Yx2Vu&_nc_ht=scontent.ford4-1.fna&oh=2d381474fb926df767613601258d2d81&oe=5F8C202B');
+			background-position: center 0;
+			background-size: cover;
+			box-shadow: 1px 2px 2px rgba(0,0,0,0.22);
+			background-repeat: no-repeat;
+		
+		}
+		.grid-item:hover {
+			transform: scale(1.07);
+			 }
+	.grid-item:nth-child(2) {
+			background-color: rgb(153, 157, 160);
+			background-image: url('https://scontent.ford4-1.fna.fbcdn.net/v/t1.15752-9/119935859_2712271392373556_7994015036159406275_n.jpg?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=VDzYodwZqygAX96pUPB&_nc_ht=scontent.ford4-1.fna&oh=82a9aadafcc2e1fc9b17fcae0e6e3b99&oe=5F8A5F20');
+		}
+			.grid-item:nth-child(3) {
+
+			background-color: #fff;
+			background-image: url('https://scontent.ford4-1.fna.fbcdn.net/v/t1.15752-9/119740809_863919631044511_4248565844457398591_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=3TnKBW-9fMgAX_U9aJA&_nc_ht=scontent.ford4-1.fna&oh=bb3c361bafbc26df1e4898774086d7cc&oe=5F8BE2F6');
+		}
+
+		.grid-item:nth-child(4) {
+			background-color: rgb(153, 157, 160);
+			background-image: url('https://source.unsplash.com/random');
+		}
+	
+
+		footer { 
+			display: flex;
+			flex-wrap: nowrap;
+			margin: auto;
+			width: 100%;
+			max-width: 50vw;
+			justify-content: center;
+		 }
+
+		 .social-link {
+		 	color:#222;
+		 	padding: 10px 7px 10px 7px;
+		 	margin: auto;
+		 	margin-top: 3em;
+		 }
+		 a.facebook { 
+		 	color: navy;
+		  }
+		 a.instagram { 
+		 	color: #E1306C;
+		 	 }
+		 a.linkedin { 
+		 	color: #405DE6;
+		 	 }
+
+		 .footer-bottom {
+		 	background-color: #000;
+		 }
+
+		 .show { display: flex; }
+
+		 .grid__overlay {
+		 	display: flex;
+		 	/*position: absolute;*/
+		 	width: 100%;
+		 	/*height: 100%;*/
+		 	background-color: rgba(229, 182, 177, 0);
+		 	height: 100%;
+		 	justify-content: center;
+		 	align-items: center;
+
+		 }
+
+		 a {text-decoration: none}
+
+
+		
+
+		  .grid__overlay:hover {
+		 	/*position: relative;*/
+		 	width: 100%;
+		 	/*height: 100%;*/
+		 	background-color: rgba(229, 182, 177, 0.67);
+		 	height: 100%;
+		 	transition: all ease 0.5s;
+		 
+		 }
+
+
+
+		.button {
+		 	background-color: transparent;
+		 	border: 3px solid #222;
+		 	border-radius: 2.3em;
+		 	font-size: 1.32em;
+		 	color: #222;
+		 	margin: auto;
+		 	display: none;
+		 	transition: all ease 0.4s;
+		 	padding: 10px 14px 10px 14px;
+
+		 }
+		 .button:hover { 
+		 	transform: scale(1.05);
+		 	border: 3px solid #eee;
+		 	color: #eee;
+
+		  }
+@media screen and (max-width: 650px){
+	main {
+			padding-top: 5em;
+			width: 100%;
+			max-width: 100vw;
+			background: rgba(229, 182, 177, 0.9);
+			display: grid;
+			grid-template-columns: 1fr;
+			margin:auto;
+		}
+	.grid-item {
+			padding: 0;
+			background-color: #09f;
+			max-height: 300px;
+			height: 300px;
+			width: 88vw;
+			background-image: url('https://source.unsplash.com/user/erondu');
+			background-position: center 0;
+			background-size: cover;
+			box-shadow: 1px 2px 2px rgba(0,0,0,0.22);
+			background-repeat: no-repeat;
+			
+		}
+	header {
+			width: 100%;
+			max-width: 100vw;
+			position: relative;
+			background-color: #eee;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+	.links {
+max-width: 88vw;
+	}
+
+	.logo {
+		margin-left: 1.23em;
+	}
+
+}
+
+	</style>
+</head>
+<body>
+	<div class="all">
+		<header>
+			<div class="logo"><img src="https://dl3.pushbulletusercontent.com/RAnIZhpRwYL2sVJwGguK4hgDb01WfGsW/SABSIGN.png" alt="sabrina reyes sign"></div>
+			
+				<nav class="links">
+					<div class="link">
+					<a href="#">Work</a>
+					</div>
+					<div class="link">
+					<a href="#">About</a>
+					</div>
+					<div class="link">
+					<a href="#">Contact Me</a>
+					</div>
+				
+			</nav>
+		</header>
+		<main>
+<div class="grid-item" id="grid-item1">
+	<div class="grid__overlay">
+       <a href="#"><button id="button1" class="button">See More</button></a>
+      </div>
+  </div>
+<div class="grid-item" id="grid-item2">
+	<div class="grid__overlay">
+       <a href="#"><button id="button2" class="button">See More</button></a>
+      </div>
+  </div>
+<div class="grid-item" id="grid-item3">
+	<div class="grid__overlay">
+       <a href="#"><button id="button3" class="button">See More</button></a>
+      </div>
+</div>
+
+		</main>
+		<footer>
+	<div class="social-link"><a class='facebook' href=""><i class="fa fa-2x fa-facebook"></i></a></div>
+	<div class="social-link"><a class='instagram' href=""><i class="fa fa-2x fa-instagram"></i></a></div>
+	<div class="social-link"><a class='linkedin' href=""><i class="fa fa-2x fa-linkedin"></i></a></div>	
+
+	<div class="footer-bottom"></div>
+</footer>
+	</div>
+
+  <script src="https://use.fontawesome.com/4ecc3dbb0b.js"></script>
+  <script>
+  	const gridItem1 = document.querySelector('#grid-item1');
+  	const gridItem2 = document.querySelector('#grid-item2');
+  	const gridItem3 = document.querySelector('#grid-item3');
+  	const buttonSeeMore1 = document.querySelector('#button1');
+  	const buttonSeeMore2 = document.querySelector('#button2');
+  	const buttonSeeMore3 = document.querySelector('#button3');
+  	function addShowClass(){
+  		buttonSeeMore1.style.display = 'flex';
+  	}
+  	function removeShowClass(){
+  		buttonSeeMore1.style.display = 'none'
+  	}
+  	function addShowClass2(){
+  		buttonSeeMore2.style.display = 'flex';
+  	}
+  	function removeShowClass2(){
+  		buttonSeeMore2.style.display = 'none'
+  	}
+  	function addShowClass3(){
+  		buttonSeeMore3.style.display = 'flex';
+  	}
+  	function removeShowClass3(){
+  		buttonSeeMore3.style.display = 'none'
+  	}
+
+  	gridItem1.addEventListener('mouseover',addShowClass);
+  	gridItem1.addEventListener('mouseout',removeShowClass);
+  	gridItem2.addEventListener('mouseover',addShowClass2);
+  	gridItem2.addEventListener('mouseout',removeShowClass2);
+  	gridItem3.addEventListener('mouseover',addShowClass3);
+  	gridItem3.addEventListener('mouseout',removeShowClass3);
+
+  	
+  </script>
+</body>
+</html>

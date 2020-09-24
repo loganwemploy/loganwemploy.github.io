@@ -139,6 +139,21 @@ u {
 .at-floating-card__footer a:hover {
   text-decoration: underline;
 }
+.mobile-cta {
+	width: 88vw;
+	height: 25vh;
+	background-color: #08f;
+	display: none;
+}
+@media (max-width: 680px) {
+	.mobile-cta {
+		width: 88vw;
+		height: 25vh;
+		background-color: #08f;
+		display: block;
+	}
+
+}
 @media (max-width: 480px) {
   .at-floating-card {
     -webkit-box-orient: vertical;
@@ -150,7 +165,6 @@ u {
     margin: 0 0 20px;
   }
 }
-
 
 	   </style>
 
@@ -227,6 +241,7 @@ u {
 	  <h2 class="at-floating-card__title">Edgar Garny</h2>
 	  <h3 class="at-floating-card__sub-title">Professional Portrait Photographer</h3>
 	  <p class="at-floating-card__description">I am a passionate Photographer that loves to experiment w/ equipment such as nikon camera x, lens 1, lens types, style of photography, headshot events, and many more!</p>
+	  <button id="mobile-cta">MOBILECTA</button>
 	  <div class="at-floating-card__footer">
 		<a href="https://andytran.me">Website</a>
 		<span> &middot; </span>

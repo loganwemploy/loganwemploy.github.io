@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" media="screen">
@@ -9,171 +8,505 @@
   <title>⚡️XCART CHW</title>
   <style type="text/css">
     body {
-      font-family: "Open Sans";
-      /*padding: 2rem 3rem;*/
-    }
+  font-family: "Open Sans";
+  font-size: 1.25rem;
+  /*padding: 2rem 3rem;*/
+  background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f9f9f9' fill-opacity='0.59'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-    .title,
-    .loading-title {
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 5em;
-      letter-spacing: 0.085em;
-      margin: 4.5rem 0 1rem;
-    }
+.title,
+.loading-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.085em;
+  /*margin: 4.5rem 0 1rem;*/
+}
 
-    .subtitle {
-      font-size: 2em;
-      margin-top: 1.7rem;
-    }
+.subtitle {
+  font-size: 2.3em;
+  margin-top: 1.7rem;
 
-    .title,
-    .loading-title,
-    .subtitle {
-      font-family: "Fjalla One";
-    }
+}
 
-    .tagline {
-      text-align: center;
-      text-transform: uppercase;
-      display: block;
-      letter-spacing: 0.3em;
-      margin: 10px 0 40px;
-      color: #aaa;
-    }
+.title,
+.loading-title,
+.subtitle {
+  font-family: "Fjalla One";
+}
 
-    .profile-img {
-      float: left;
-      width: 350px;
-      margin-right: 1.5em;
-      display: block;
-    }
+.tagline {
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: 0.3em;
+  margin: 10px 0 40px;
+  color: #aaa;
+}
 
-    .main-nav {
-      text-align: center;
-    }
+.profile-img {
+  float: left;
+  width: 350px;
+  margin-right: 1.5em;
+  display: block;
+}
 
-    .main-nav ul {
-      padding: 0;
-    }
+.main-nav {
+  text-align: center;
+}
 
-    .main-nav li {
-      display: inline-block;
-      text-decoration: none;
-      margin: 0 20px;
-      text-transform: uppercase;
-    }
+.main-nav ul {
+  padding: 0;
+}
 
-    .main-nav li a {
-      text-decoration: none;
-      color: #000;
-    }
+.main-nav li {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 20px;
+  text-transform: uppercase;
+}
 
-    .main-nav li a:hover,
-    .main-nav li a.active {
-      color: #aaa;
-    }
+.main-nav li a {
+  text-decoration: none;
+  color: #000;
+}
 
-    .page {
-      max-width: 980px;
-      padding: 0 20px 0 11.2em;
-      margin: 75px auto 0;
-    }
+.main-nav li a:hover,
+.main-nav li a.active {
+  color: tan;
+}
+
+.page {
+  max-width: 980px;
+  padding: 0 20px 0 11.2em;
+  margin: 75px auto 0;
+}
 
 
-    .page a {
-      color: #000;
-    }
+.page a {
+  color: #000;
+}
 
-    .loading {
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      top: 10px;
-      left: 0;
-      background: #000;
-      transition: 0.75s;
-    }
+.loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  background: #000;
+  transition: 400ms;
+}
 
-    .loading-title {
-      color: #8C683C;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+.loading-title {
+  color: #8C683C;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-    .loading-progress {
-      height: 11px;
-      background: #000;
-      top: -11px;
-      bottom: 0;
-      width: 100%;
-      position: absolute;
-      transition: 0.35s;
-    }
+.loading-progress {
+  height: 11px;
+  background: #000;
+  top: -11px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  transition: 0.35s;
+}
 
-    .about-me {
-      margin: 20px 0 0;
-    }
+.about-me {
+  margin: 20px 0 0;
+}
 
-    .vpn-note {
-      color: #8C683C;
-    }
+.vpn-note {
+  color: #8C683C;
+}
 
-    @media (max-width: 900px) {
-      .profile-img {
-        float: none;
-        margin: 0 auto;
-        width: 600px;
-      }
+@media (max-width: 900px) {
+  .profile-img {
+    float: none;
+    margin: 0 auto;
+    width: 600px;
+  }
 
-      .about-me {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-    }
+  .about-me {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 0.85em;
+  }
 
-    @media (max-width: 780px) {
-      html {
-        font-size: 0.85em;
-      }
+  .main-nav li {
+    margin: 0 5px;
+  }
 
-      .main-nav li {
-        margin: 0 5px;
-      }
+  .page {
+    margin-top: 20px;
+    padding: 0 20px 0 1rem;
+  }
 
-      .page {
-        margin-top: 20px;
-        padding: 0 20px 0 1rem;
-      }
+.title {
+  zoom: 0.88;
+}
 
-      .title {
-        zoom: 0.88;
-      }
+  .profile-img {
+    margin-top: 25px;
+  }
 
-      .profile-img {
-        margin-top: 25px;
-      }
+}
 
-    }
+
+
+
+/*magic title*/
+.body-magic {
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto Condensed;
+ 
+}
+
+.header-magic {
+  margin-top: 2em auto 0 auto;
+  margin-left: 0.5em;
+  position: relative;
+  will-change: opacity;
+  padding-top: 0;
+}
+
+.header-magic:before,
+.header-magic:after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.header-magic:before {
+  animation: swipe 4.5s ease-in-out;
+  animation-duration: 5s;
+  background-color: black;
+  transform: scaleX(0);
+}
+
+.header-magic:after {
+  background: tan;
+  z-index: -2;
+}
+
+h1 {
+  color: tan;
+  font-size: 6vw;
+  mix-blend-mode: difference;
+  transform: scaleY(1.25);
+  letter-spacing: -2px;
+  font-weight: 700;
+  margin: 1ch;
+}
+
+@keyframes swipe {
+  0% {
+    transform-origin: bottom left;
+    transform: scaleX(0);
+  }
+
+  25% {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform-origin: bottom right;
+    transform: scaleX(1);
+  }
+
+  75% {
+    transform-origin: bottom right;
+    transform: scaleX(0);
+  }
+}
+
+/* // magic title*/
+
+
+/*start game css*/
+
+.game-body {
+  counter-reset: game;
+  text-align: center;
+  /*background: #e9b58b;*/
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  color: #333;
+  padding: 0;
+  margin-left: -10vw;  
+}
+
+input:checked {
+  counter-increment: game;
+}
+
+.total-count::after {
+  content: counter(game);
+}
+
+h2 {
+  font-size: 1em;
+  margin: -0.5em auto 3em;
+  font-weight: 400;
+}
+
+.total-count {
+  font-size: 1.75em;
+  position: absolute;
+  top: 1.75em;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 300;
+  color: #bada55
+}
+
+.game-area {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  min-height: 550px;
+  max-height: 700px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.game-area > li {
+  width: calc(33% - .5em);
+  margin-bottom: 1em;
+  height: 10em;
+  list-style: none;
+  position: relative;
+  outline: 4px solid white;
+  background: #64ddf3;
+}
+li:nth-child(1) input {
+  filter: hue-rotate(180.0909556563deg) brightness(1.246677251);
+  -webkit-animation-duration: 2.4593224577s;
+          animation-duration: 2.4593224577s;
+}
+li:nth-child(2) input {
+  filter: hue-rotate(340.747582521deg) brightness(1.4928782871);
+  -webkit-animation-duration: 0.9688842876s;
+          animation-duration: 0.9688842876s;
+}
+li:nth-child(3) input {
+  filter: hue-rotate(298.1759941674deg) brightness(1.0338689775);
+  -webkit-animation-duration: 1.5601834425s;
+          animation-duration: 1.5601834425s;
+}
+li:nth-child(4) input {
+  filter: hue-rotate(203.4682742966deg) brightness(1.6110614391);
+  -webkit-animation-duration: 4.6191454447s;
+          animation-duration: 4.6191454447s;
+}
+li:nth-child(5) input {
+  filter: hue-rotate(166.2257809513deg) brightness(1.1016313126);
+  -webkit-animation-duration: 1.5974483522s;
+          animation-duration: 1.5974483522s;
+}
+li:nth-child(6) input {
+  filter: hue-rotate(155.8130040543deg) brightness(1.3464190069);
+  -webkit-animation-duration: 2.3212114787s;
+          animation-duration: 2.3212114787s;
+}
+li:nth-child(7) input {
+  filter: hue-rotate(72.7973428428deg) brightness(1.4822217798);
+  -webkit-animation-duration: 0.9830398542s;
+          animation-duration: 0.9830398542s;
+}
+li:nth-child(8) input {
+  filter: hue-rotate(298.8010013309deg) brightness(1.4893082534);
+  -webkit-animation-duration: 2.6597593638s;
+          animation-duration: 2.6597593638s;
+}
+li:nth-child(9) input {
+  filter: hue-rotate(211.8280691515deg) brightness(1.1421101406);
+  -webkit-animation-duration: 4.7261332908s;
+          animation-duration: 4.7261332908s;
+}
+
+input[type=checkbox] {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  cursor: crosshair;
+  background: radial-gradient(red 10%, white 10%, white 30%, red 30%, red 50%, white 50%, white 80%, red 80%, red 100%);
+  border-radius: 50%;
+  display: block;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 6px solid red;
+  -webkit-animation: hide-target infinite alternate ease-in-out;
+          animation: hide-target infinite alternate ease-in-out;
+  z-index: 1;
+}
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 50%;
+  width: 6px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  margin: 0 auto;
+  z-index: -1;
+}
+input[type=checkbox]:focus {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+input[type=checkbox]:checked {
+  pointer-events: none;
+  filter: grayscale(1) opacity(0.75);
+  -webkit-animation: none;
+          animation: none;
+}
+input[type=checkbox]:checked:after {
+  content: "+1!";
+  padding: 0.5em;
+  margin: 1em 0 0 1.5em;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.shield {
+  background-color: #9c4605;
+background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23f9f9f9' fill-opacity='0.29'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  width: 100%;
+  height: 60%;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: all;
+  z-index: 100;
+}
+
+@-webkit-keyframes hide-target {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 50%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes hide-target {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 50%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.game-over {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: white;
+  pointer-events: all;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 200;
+  /*-webkit-animation: appear 0.25s forwards;
+          animation: appear 0.25s forwards;
+  -webkit-animation-delay: 800000000000000s;
+          animation-delay: 800000000000000s;
+  background: repeating-linear-gradient(-45deg, #c9ff00 0, #c9ff00 5em, #20c0ff 5em, #20c0ff 10em);*/
+}
+.game-over h1 {
+  padding: 1em 0 3.5em;
+  background: white;
+}
+
+@-webkit-keyframes appear {
+  from {
+    top: -100vh;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    top: -100vh;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.play-again {
+  background: white;
+  color: #20c0ff;
+  padding: 0.5em 1em;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+small a {
+  margin-bottom: 2em;
+  display: block;
+  color: #222;
+}
+/* /end game css*/
   </style>
 </head>
-
 <body>
+   <div class="body-magic">
+      <div class="header-magic">
   <h1 class="title">Xcart Cheatsheet</h1>
+</div>
+</div>
   <span class="tagline">Cooper's Hawk Links last updated 08/2022</span>
   <nav class="main-nav">
     <ul>
-      <li><a class="active" id="about-page" data-page="about" href="#">About</a></li>
-      <li><a href="#" id="publications-page" data-page="publications">Publications</a></li>
-      <li><a href="#" id="contact-page" data-page="contact">Contact</a></li>
+      <li><a class="active" id="about-page" data-page="about" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-RockOn"><path d="M19 16l.87-11.735a2.102 2.102 0 0 0-4.181-.433L15 9"/><path d="M8 11l-.713-4.279a2.06 2.06 0 0 0-4.083.525L4 16"/><path d="M12 13v-1.5a2 2 0 1 0-4 0V15"/><path d="M16 13v-2a2 2 0 1 0-4 0v2"/><path d="M19 16c-.536 4-3.358 6-7.5 6C7.358 22 4 20 4 16"/><path d="M13.692 17H11a2 2 0 1 1 0-4h4c2.21 0 4.5 2 3.5 5"/></svg>Links</a></li>
+      <li><a href="#" id="publications-page" data-page="publications"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-GameController"><path d="M9 15l-2.968 2.968A2.362 2.362 0 0 1 2 16.298V15l1.357-6.784A4 4 0 0 1 7.279 5h9.442a4 4 0 0 1 3.922 3.216L22 15v1.297a2.362 2.362 0 0 1-4.032 1.67L15 15H9z"/><path d="M9 5l1 2h4l1-2" style="background-color: red"/></svg>Mini-game</a></li>
+      <li><a href="#" id="contact-page" data-page="contact"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Envelope"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"/><path d="M2 8l7.501 6.001a4 4 0 0 0 4.998 0L22 8"/></svg>Contact</a></li>
     </ul>
   </nav>
   <section data-page-name="about" class="page default">
@@ -181,85 +514,112 @@
     <div class="about-me">
       <p><b>Xcart can be unweildly at times. Here is a list of links and notes to help. Still WIP/in-development.</b>
         <br>
+          <span class="vpn-note">
+       Note: must be connected to VPN or office network</p>
+     </span>  
         <br>
-        <span class="vpn-note">
-          Note: must be connected to VPN or office network
-      </p>
-      </span>
+        <br>
+   
     </div>
+   
+     <h2 class="subtitle">Xcart4</h2>
+     <h3 style="font-weight: bold;margin-top: -3em;background:blue;color: white;font-family: 'Fjalla One', sans-serif;max-width: 15ch;text-align: center;padding: 5px 7px;">TEST XCART4</h3>
+  <p style="max-width:67vw"><a href="https://testcart.coopershawkwinery.com" target="_blank">TestXC4 FrontEnd (testcart.coopershawkwinery.com)</a></p>
+   <p><a href="https://testcart.coopershawkwinery.com/admin/home.php" target="_blank">TestXC4 ADMIN (testcart.coopershawkwinery.com/admin)</a></p>
+   <br>
+   <h3 style="font-weight: bold;margin-top: -1em;background:navy;color: white;font-family: 'Fjalla One', sans-serif;max-width: 15ch;text-align: center;padding: 5px 7px;">PROD XCART4</h3>
+  <p><a href="https://shop.coopershawkwinery.com/admin" target="_blank">ProdXC4 ADMIN</a></p>
+  <p><a href="https://github.com/chwinery/shop/tree/master/xcart/public_html" target="_blank">Prod Xcart4 github repo</a></p>
+ 
+  <p><a href="https://shop.coopershawkwinery.com" target="_blank">ProdXC4 FrontEnd (https://shop.coopershawkwinery.com)</a></p>
+<br>
+ 
+  <h2 class="subtitle">Xcart5</h2>
 
-    <h2 class="subtitle">Xcart4</h2>
-    <p><a href="http://brevitymag.com/nonfiction/pieces-dad-mails-me-before-he-moves-away-a-list/" target="_blank">Test
-        Xcart4 login</a></p>
-    <p><a href="http://brevitymag.com/nonfiction/pieces-dad-mails-me-before-he-moves-away-a-list/" target="_blank">Prod
-        Xcart4 login</a></p>
-    <p><a href="http://booth.butler.edu/2016/06/24/suprasellar/" target="_blank">Prod Xcart4 github repo</a></p>
-    <p><a href="http://therumpus.net/2016/07/how-we-break/" target="_blank">Prod site(shop.c)</a></p>
-    <p><a href="http://therumpus.net/2016/07/how-we-break/" target="_blank">Test site(testcart.c)</a></p>
-
-    <h2 class="subtitle">Xcart5</h2>
-    <p><a href="http://brevitymag.com/nonfiction/pieces-dad-mails-me-before-he-moves-away-a-list/" target="_blank">Test
-        Xcart4 login</a></p>
-    <p><a href="http://booth.butler.edu/2016/06/24/suprasellar/" target="_blank">Prod Xcart4 login</a></p>
-
+   <h3 style="font-weight: bold;margin-top: -3em;background:blue;color: white;font-family: 'Fjalla One', sans-serif;max-width: 15ch;text-align: center;padding: 5px 7px;">TEST XCART5</h3>
+  <p><a href="https://testcart5.coopershawkwinery.com/admin.php" target="_blank">TestXC5 Admin</a></p>
+  <p><a href="https://testcart5.coopershawkwinery.com" target="_blank">TestXC5 FrontEnd</a></p>
+  <br>
+  <!--  <h3 style="font-weight: bold;background:navy;color: white;font-family: 'Fjalla One', sans-serif;max-width: 15ch;text-align: center;padding: 5px 7px;">PROD XCART5</h3>
+  <p><a href="https://testcart5.coopershawkwinery.com/admin.php" target="_blank">TestXC5 ADMIN</a></p>
+  <p><a href="http://booth.butler.edu/2016/06/24/suprasellar/" target="_blank">Prod Xcart5 login</a></p> -->
+<br><br><br><br><br>
   </section>
-
+ 
   <section data-page-name="publications" class="page">
+  <div class="game-body">
+<div class="game-over">
+  <h1>Game Over!</h1>
+  <a class="play-again" target="_parent" href="https://codepen.io/una/full/NxZaNr">Play Again</a>
+</div>
 
-  </section>
+<ul class="game-area">
+  <li><input type="checkbox"><div class="shield"></div></li>
+  <li><input type="checkbox"><div class="shield"></div></li>
+  <li><input type="checkbox"><div class="shield"></div></li>
+  <li><input type="checkbox"><div class="shield"></div></li>
+  <li><input type="checkbox"><div class="shield"></div></li>
+  <li><input type="checkbox"><div class="shield"></div></li>
+  <li><input type="checkbox"><div class="shield"></div></li>
+  <li><input type="checkbox"><div class="shield"></div></li>
+  <li><input type="checkbox"><div class="shield"></div></li>
+</ul>
 
-  <section data-page-name="contact" class="page">
-    <p>Xcart Support: <a href="https://twitter.com/AnnaliseMabe">@Lilia Khakhova</a></p>
-    <!-- <p>Instagram: <a href="https://www.instagram.com/annalisemabe/">@AnnaliseMabe</a></p> -->
-  </section>
+<h3 class="total-count">Targets Hit: &nbsp;</h3>
 
-  <!-- Loading -->
+</section>
+
+<section data-page-name="contact" class="page">
+  <p>Xcart Support: <a href="https://twitter.com/AnnaliseMabe">@Lilia Khakhova</a></p>
+  <!-- <p>Instagram: <a href="https://www.instagram.com/annalisemabe/">@AnnaliseMabe</a></p> -->
+</section>
+ 
+<!-- Loading -->
   <div class="loading">
     <h1 class="loading-title">loading</h1>
     <div class="loading-progress"></div>
   </div>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
   <script type="text/javascript">function getRandomArbitrary(min, max) {
-      return Math.random() * (max - min) + min;
-    }
+  return Math.random() * (max - min) + min;
+}
 
-    // super simple router - go to page specified in hash, otherwise go to "default"
-    function router(route) {
-      const pageName = route ? route : $('.default.page').attr('data-page-name');
-      const $page = $(`[data-page-name="${pageName}"]`);
-      $('.page').css('display', 'none');
-      $('[data-page]').removeClass('active');
-      $(`[data-page="${pageName}"]`).addClass('active');
-      $page.css('display', 'block');
-    }
-    router();
+// super simple router - go to page specified in hash, otherwise go to "default"
+function router(route) {
+  const pageName = route ? route : $('.default.page').attr('data-page-name');
+  const $page = $(`[data-page-name="${pageName}"]`);
+  $('.page').css('display', 'none');
+  $('[data-page]').removeClass('active');
+  $(`[data-page="${pageName}"]`).addClass('active');
+  $page.css('display', 'block');
+}
+router();
 
-    // fake loader
-    let progress = 0;
-    const fakeLoaderInterval = window.setInterval(function () {
-      const $lp = $('.loading-progress');
-      progress = progress + getRandomArbitrary(10, 25);
-      $lp.css('transform', `translateX(${progress}%)`);
+// fake loader
+let progress = 0;
+const fakeLoaderInterval = window.setInterval(function () {
+  const $lp = $('.loading-progress');
+  progress = progress + getRandomArbitrary(10, 25);
+  $lp.css('transform', `translateX(${progress}%)`);
 
-      if (progress >= 75) {
-        window.clearInterval(fakeLoaderInterval);
-        $lp.css('transform', 'translateX(100%)');
-        setTimeout(() => $('.loading').css('transform', 'translateY(calc(100% + 10px))'), 400);
-      }
-    }, getRandomArbitrary(100, 500));
+  if (progress >= 75) {
+    window.clearInterval(fakeLoaderInterval);
+    $lp.css('transform', 'translateX(100%)');
+    setTimeout(() => $('.loading').css('transform', 'translateY(calc(100% + 10px))'), 400);
+  }
+}, getRandomArbitrary(100, 500));
 
-    // navigation
-    $('.main-nav li a').on('click', e => {
-      const $this = $(e.currentTarget);
-      const route = $this.attr('data-page');
+// navigation
+$('.main-nav li a').on('click', e => {
+  const $this = $(e.currentTarget);
+  const route = $this.attr('data-page');
 
-      $('.main-nav li a').removeClass('active');
-      $this.addClass('active');
-      router(route);
-    });</script>
+  $('.main-nav li a').removeClass('active');
+  $this.addClass('active');
+  router(route);
+});</script>
 </body>
-
-</html>
+</html> 
